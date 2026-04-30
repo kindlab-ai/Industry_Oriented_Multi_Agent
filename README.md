@@ -5,7 +5,7 @@ Research and Applications of Industry-Oriented Multi-Agent Self-Evolving Context
 
 ## 初筛论文列表
 
-### A. 领域总览与奠基框架：必须先读
+### A. 领域总览与奠基框架
 
 1. **Large Language Model based Multi-Agents: A Survey of Progress and Challenges**
     多智能体 LLM 的总综述，适合用来搭综述的“背景—分类—挑战”总框架。 
@@ -26,7 +26,7 @@ Research and Applications of Industry-Oriented Multi-Agent Self-Evolving Context
 
 ------
 
-### B. 多智能体“自进化/自改进”方向：你题目里的核心创新轴
+### B. 多智能体“自进化/自改进”方向
 
 1. **360°REA: Towards A Reusable Experience Accumulation with 360° Assessment for Multi-Agent System**（Findings of ACL 2024）
     这篇非常贴你的题：多 agent、评估反馈、经验池、可复用经验积累，已经明显触到“自进化上下文”的雏形。 
@@ -72,7 +72,7 @@ Research and Applications of Industry-Oriented Multi-Agent Self-Evolving Context
 
 ------
 
-### D. 行业应用：导师特别强调要看“在哪些行业用了”
+### D. 行业应用：
 
 #### 1）软件工程
 
@@ -115,7 +115,7 @@ Research and Applications of Industry-Oriented Multi-Agent Self-Evolving Context
 
 ------
 
-### E. 评测与基准：EMNLP 风格综述一定要单列
+### E. 评测与基准
 
 1. **MAgIC: Investigation of LLM Powered Multi-Agent in Cognition, Adaptability, Rationality and Collaboration**（EMNLP 2024）
     多智能体评测的代表作之一，建议放在“评测维度与benchmark”部分。 
