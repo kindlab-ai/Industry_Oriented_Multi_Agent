@@ -1,74 +1,78 @@
 ```
-Title: A Survey of Self-Evolving Context Engineering for LLM-based Multi-Agent Systems in Industry Applications
-
-Abstract
+Title:
+A Survey of Self-Evolving Context Engineering for LLM-based Multi-Agent Systems in Industry Applications
 
 1. Introduction
-   1.1 Motivation: From single agents to industry-oriented multi-agent systems
-   1.2 Why context matters
-   1.3 Why self-evolution matters
-   1.4 Contributions of this survey
 
-2. Background and Scope
-   2.1 LLM agents
-   2.2 LLM-based multi-agent systems
-   2.3 From in-context learning to context engineering
-   2.4 Definition of self-evolving context
-   2.5 Survey scope and paper selection criteria
+2. Preliminaries
+   2.1 LLM Agents
+   2.2 Multi-Agent Systems
+   2.3 Context Engineering
+   2.4 Self-Evolution
 
-3. Taxonomy of Context in Multi-Agent Systems
-   3.1 Context sources
-   3.2 Context representations
-   3.3 Context operations
-   3.4 Context flow among agents
-   3.5 Context failure modes
+3. Taxonomy of Self-Evolving Context in Multi-Agent Systems
+   3.1 Context Construction
+   3.2 Context Coordination
+   3.3 Context Evolution
+   3.4 Context Evaluation
+   3.5 Context Failure Modes
 
-4. Multi-Agent Mechanisms for Context Construction and Coordination
-   4.1 Role-based collaboration
-   4.2 Conversation-based coordination
-   4.3 Workflow and SOP-based coordination
-   4.4 Debate, critique, and verification
-   4.5 Graph and orchestrator-based coordination
+4. Context Construction
+   4.1 Causes and Motivation
+   4.2 Methods
+       - In-context learning
+       - Retrieval-augmented context
+       - Memory-augmented context
+       - Long-context processing
+       - Tool-generated context
+   4.3 Analysis of System Behaviors
+   4.4 Limitations
 
-5. Self-Evolving Context Techniques
-   5.1 Reflection-driven context evolution
-   5.2 Experience accumulation and memory reuse
-   5.3 Prompt and context optimization
-   5.4 Multi-agent co-evolution
-   5.5 Evaluation-driven evolution
+5. Multi-Agent Context Coordination
+   5.1 Causes and Motivation
+   5.2 Methods
+       - Role-based coordination
+       - Conversation-based coordination
+       - Workflow/SOP-based coordination
+       - Debate and judge-based coordination
+       - Graph/orchestrator-based coordination
+   5.3 Analysis of System Behaviors
+   5.4 Limitations
 
-6. Industry Applications
-   6.1 Software engineering and data science
-   6.2 Healthcare and medical decision support
-   6.3 Finance and investment analysis
-   6.4 Autonomous driving and embodied decision-making
-   6.5 Scientific discovery and drug discovery
-   6.6 Creative generation and multimodal applications
-   6.7 Safety-critical and trustworthy deployment
+6. Self-Evolving Context Mechanisms
+   6.1 Causes and Motivation
+   6.2 Methods
+       - Reflection-driven evolution
+       - Experience accumulation
+       - Prompt/context optimization
+       - Reward/judge-driven evolution
+       - Co-evolution
+   6.3 Analysis of Evolution Behaviors
+   6.4 Limitations
 
-7. Evaluation and Benchmarks
-   7.1 Task performance
-   7.2 Collaboration quality
-   7.3 Context quality
-   7.4 Evolution quality
-   7.5 Deployment metrics
+7. Industry Applications
+   7.1 Software Engineering and Data Science
+   7.2 Healthcare and Medical Decision Support
+   7.3 Finance and Investment Analysis
+   7.4 Autonomous Driving and Embodied Decision-Making
+   7.5 Scientific Discovery and Drug Discovery
+   7.6 Creative Generation and Multimodal Applications
+   7.7 Safety-Critical and Trustworthy Deployment
 
-8. Open Challenges
-   8.1 Definition ambiguity
-   8.2 Context attribution
-   8.3 Memory pollution
-   8.4 Cost and scalability
-   8.5 Lack of industry benchmarks
-   8.6 Security and context integrity
-   8.7 Long-context limitations
-   8.8 Controllability of self-evolution
+8. Benchmarks and Evaluation
+   8.1 Benchmarks for Multi-Agent Collaboration
+   8.2 Benchmarks for Context and Memory
+   8.3 Benchmarks for Self-Evolution
+   8.4 Domain-Specific Evaluation
 
-9. Future Directions
-   9.1 Context as a first-class optimization object
-   9.2 Domain-specific evolving memory
-   9.3 Context-aware orchestration
-   9.4 Auditable and safe context evolution
-   9.5 Human-agent co-evolution
+9. Challenges and Future Directions
+   9.1 Self-Evolving Context in the Wild
+   9.2 Domain-Aware Fine-Grained Evolution
+   9.3 Evaluation on Downstream Industry Tasks
+   9.4 Interplay among Agents, Context, and Memory
+   9.5 Explainability and Attribution
+   9.6 Safety, Privacy, and Compliance
+   9.7 Multilingual, Multimodal, and Embodied Extension
 
 10. Conclusion
 
