@@ -120,7 +120,7 @@ These are the systems every quantitative claim in the survey's empirical section
 | 1 | [360°REA: Towards A Reusable Experience Accumulation with 360° Assessment for Multi-Agent System](https://aclanthology.org/2024.findings-acl.778/) | Findings-ACL 2024 | **retained** | ✓ |
 | 2 | [Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models](https://openreview.net/forum?id=eC4ygDs02R) | ICLR 2026 | **retained** | ✓ |
 | 3 | [CoMAS: Co-Evolving Multi-Agent Systems via Interaction Rewards](https://openreview.net/forum?id=ihwAzktmWc) | ICLR 2026 | **retained** | ✓ |
-| 4 | [EvoPrompt: Connecting LLMs with Evolutionary Algorithms Yields Powerful Prompt Optimizers](https://openreview.net/forum?id=zg3PuXyH2X) | Proc. Int. Conf. Learn. Represent. 2024 | not retained --- single agent | ✓ |
+| 4 | [EvoPrompt: Connecting LLMs with Evolutionary Algorithms Yields Powerful Prompt Optimizers](https://openreview.net/forum?id=zg3PuXyH2X) † | Proc. Int. Conf. Learn. Represent. 2024 | not retained --- single agent | ✓ |
 | 5 | [EvoPrompting: Language Models for Code-Level Neural Architecture Search](https://arxiv.org/abs/2302.14838) | NeurIPS 2023 | not retained --- single agent (NAS) |  |
 | 6 | [EvolveR: Self-Evolving LLM Agents through an Experience-Driven Lifecycle](https://arxiv.org/abs/2510.16079) | preprint 2026 | **retained** | ✓ |
 | 7 | [GenPilot: A Multi-Agent System for Test-Time Prompt Optimization in Image Generation](https://aclanthology.org/2025.findings-emnlp.49/) | EMNLP 2025 | **retained** | ✓ |
@@ -140,22 +140,22 @@ These are the systems every quantitative claim in the survey's empirical section
 
 | # | Paper | Venue / year | Status | Cited |
 |---:|---|---|---|:-:|
-| 1 | [Enabling Large Language Models to Generate Text with Citations](https://aclanthology.org/2023.emnlp-main.398/) | EMNLP 2023 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) |  |
-| 2 | [FreshLLMs: Refreshing Large Language Models with Search Engine Augmentation](https://aclanthology.org/2024.findings-acl.813/) | Findings Assoc. Comput. Linguistics: ACL 2024 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
-| 3 | [LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models](https://doi.org/10.18653/v1/2023.emnlp-main.825) | Proc. Conf. Empirical Methods Natural Lang. Process. 2023 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
-| 4 | [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165) | Proc. Adv. Neural Inf. Process. Syst. 2020 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
-| 5 | [LongBench: A Bilingual, Multitask Benchmark for Long Context Understanding](https://aclanthology.org/2024.acl-long.172/) | Proc. 62nd Annu. Meeting Assoc. Comput. Linguistics 2024 | not retained --- benchmark | ✓ |
-| 6 | [LongLLMLingua: Accelerating and Enhancing LLMs in Long Context Scenarios via Prompt Compression](https://doi.org/10.18653/v1/2024.acl-long.91) | Proc. 62nd Annu. Meeting Assoc. Comput. Linguistics 2024 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
-| 7 | [LongLeader: A Comprehensive Leaderboard for Large Language Models in Long-context Scenarios](https://aclanthology.org/2025.naacl-long.439/) | Proc. Conf. Nations Americas Chapter Assoc. Comput. Linguistics: Human Lang. Technol. 2025 | not retained --- benchmark | ✓ |
-| 8 | [Lost in the Middle: How Language Models Use Long Contexts](https://aclanthology.org/2024.tacl-1.9/) | Trans. Assoc. Comput. Linguistics 2024 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
-| 9 | [Measuring Attribution in Natural Language Generation Models](https://arxiv.org/abs/2112.12870) | Computational Linguistics 2023 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) |  |
-| 10 | [MemBench: Towards More Comprehensive Evaluation on the Memory of LLM-based Agents](https://aclanthology.org/2025.findings-acl.989/) | Findings Assoc. Comput. Linguistics: ACL 2025 | not retained --- benchmark | ✓ |
-| 11 | [MemGPT: Towards LLMs as Operating Systems](https://arxiv.org/abs/2310.08560) | arXiv preprint 2023 | not retained --- single agent | ✓ |
-| 12 | [RECOMP: Improving Retrieval-Augmented LMs with Compression and Selective Augmentation](https://arxiv.org/abs/2310.04408) | ICLR 2024 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) |  |
-| 13 | [ReAct: Synergizing Reasoning and Acting in Language Models](https://openreview.net/forum?id=WE_vluYUL-X) | Proc. Int. Conf. Learn. Represent. 2023 | not retained --- single agent | ✓ |
-| 14 | [Rethinking the Role of Demonstrations: What Makes In-Context Learning Work?](https://aclanthology.org/2022.emnlp-main.759/) | Proc. Conf. Empirical Methods Natural Lang. Process. 2022 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
-| 15 | [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401) | Proc. Adv. Neural Inf. Process. Syst. 2020 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
-| 16 | [Compressing Context to Enhance Inference Efficiency of Large Language Models](https://aclanthology.org/2023.emnlp-main.391/) ⚠️ | EMNLP 2023 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) |  |
+| 1 | [Compressing Context to Enhance Inference Efficiency of Large Language Models](https://aclanthology.org/2023.emnlp-main.391/) † | EMNLP 2023 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) |  |
+| 2 | [Enabling Large Language Models to Generate Text with Citations](https://aclanthology.org/2023.emnlp-main.398/) | EMNLP 2023 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) |  |
+| 3 | [FreshLLMs: Refreshing Large Language Models with Search Engine Augmentation](https://aclanthology.org/2024.findings-acl.813/) | Findings Assoc. Comput. Linguistics: ACL 2024 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
+| 4 | [LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models](https://doi.org/10.18653/v1/2023.emnlp-main.825) | Proc. Conf. Empirical Methods Natural Lang. Process. 2023 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
+| 5 | [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165) | Proc. Adv. Neural Inf. Process. Syst. 2020 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
+| 6 | [LongBench: A Bilingual, Multitask Benchmark for Long Context Understanding](https://aclanthology.org/2024.acl-long.172/) | Proc. 62nd Annu. Meeting Assoc. Comput. Linguistics 2024 | not retained --- benchmark | ✓ |
+| 7 | [LongLLMLingua: Accelerating and Enhancing LLMs in Long Context Scenarios via Prompt Compression](https://doi.org/10.18653/v1/2024.acl-long.91) | Proc. 62nd Annu. Meeting Assoc. Comput. Linguistics 2024 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
+| 8 | [LongLeader: A Comprehensive Leaderboard for Large Language Models in Long-context Scenarios](https://aclanthology.org/2025.naacl-long.439/) | Proc. Conf. Nations Americas Chapter Assoc. Comput. Linguistics: Human Lang. Technol. 2025 | not retained --- benchmark | ✓ |
+| 9 | [Lost in the Middle: How Language Models Use Long Contexts](https://aclanthology.org/2024.tacl-1.9/) | Trans. Assoc. Comput. Linguistics 2024 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
+| 10 | [Measuring Attribution in Natural Language Generation Models](https://arxiv.org/abs/2112.12870) | Computational Linguistics 2023 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) |  |
+| 11 | [MemBench: Towards More Comprehensive Evaluation on the Memory of LLM-based Agents](https://aclanthology.org/2025.findings-acl.989/) | Findings Assoc. Comput. Linguistics: ACL 2025 | not retained --- benchmark | ✓ |
+| 12 | [MemGPT: Towards LLMs as Operating Systems](https://arxiv.org/abs/2310.08560) | arXiv preprint 2023 | not retained --- single agent | ✓ |
+| 13 | [RECOMP: Improving Retrieval-Augmented LMs with Compression and Selective Augmentation](https://arxiv.org/abs/2310.04408) | ICLR 2024 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) |  |
+| 14 | [ReAct: Synergizing Reasoning and Acting in Language Models](https://openreview.net/forum?id=WE_vluYUL-X) | Proc. Int. Conf. Learn. Represent. 2023 | not retained --- single agent | ✓ |
+| 15 | [Rethinking the Role of Demonstrations: What Makes In-Context Learning Work?](https://aclanthology.org/2022.emnlp-main.759/) | Proc. Conf. Empirical Methods Natural Lang. Process. 2022 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
+| 16 | [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401) | Proc. Adv. Neural Inf. Process. Syst. 2020 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
 | 17 | [The Mystery of In-Context Learning: A Comprehensive Survey on Interpretation and Analysis](https://aclanthology.org/2024.emnlp-main.795/) | Proc. Conf. Empirical Methods Natural Lang. Process. 2024 | not retained --- survey | ✓ |
 | 18 | [Toolformer: Language Models Can Teach Themselves to Use Tools](https://openreview.net/forum?id=Yacmpz84TH) | Proc. Adv. Neural Inf. Process. Syst. 2023 | not retained --- single agent | ✓ |
 | 19 | [Tree of Agents: Improving Long-Context Capabilities of Large Language Models through Multi-Perspective Reasoning](https://aclanthology.org/2025.findings-emnlp.246/) | Findings Assoc. Comput. Linguistics: EMNLP 2025 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
@@ -165,8 +165,8 @@ These are the systems every quantitative claim in the survey's empirical section
 
 | # | Paper | Venue / year | Status | Cited |
 |---:|---|---|---|:-:|
-| 1 | [AI Hospital: Benchmarking Large Language Models in a Multi-agent Medical Interaction Simulator](https://aclanthology.org/2025.coling-main.680/) | Proc. 31st Int. Conf. Comput. Linguistics 2025 | not retained --- screened, criterion not met | ✓ |
-| 2 | [AI Hospital: Benchmarking Large Language Models in a Multi-agent Medical Interaction Simulator](https://aclanthology.org/2025.coling-main.680/) ⚠️ | COLING 2025 | **retained** | ✓ |
+| 1 | [AI Hospital: Benchmarking Large Language Models in a Multi-agent Medical Interaction Simulator](https://aclanthology.org/2025.coling-main.680/) † | COLING 2025 | **retained** | ✓ |
+| 2 | [AI Hospital: Benchmarking Large Language Models in a Multi-agent Medical Interaction Simulator](https://aclanthology.org/2025.coling-main.680/) | Proc. 31st Int. Conf. Comput. Linguistics 2025 | not retained --- screened, criterion not met | ✓ |
 | 3 | [Autonomous Agents for Scientific Discovery: Orchestrating Scientists, Language, Code, and Physics](https://arxiv.org/abs/2510.09901) | preprint 2025 | **retained** | ✓ |
 | 4 | [Autonomous Chemical Research with Large Language Models](https://doi.org/10.1038/s41586-023-06792-0) | Nature 2023 | **retained** | ✓ |
 | 5 | [DatawiseAgent: A Notebook-Centric LLM Agent Framework for Adaptive and Robust Data Science Automation](https://aclanthology.org/2025.emnlp-main.58/) | EMNLP 2025 | **retained** | ✓ |
@@ -186,15 +186,15 @@ These are the systems every quantitative claim in the survey's empirical section
 | # | Paper | Venue / year | Status | Cited |
 |---:|---|---|---|:-:|
 | 1 | [ARES: An Automated Evaluation Framework for Retrieval-Augmented Generation Systems](https://aclanthology.org/2024.naacl-long.20/) | Proc. Conf. North Amer. Chapter Assoc. Comput. Linguistics: Human Lang. Technol. 2024 | not retained --- eval framework | ✓ |
-| 2 | [AgentBench: Evaluating LLMs as Agents](https://openreview.net/forum?id=zAdUB0aCTQ) | Proc. Int. Conf. Learn. Represent. 2024 | not retained --- benchmark | ✓ |
-| 3 | [Agents Under Siege: Breaking Pragmatic Multi-Agent LLM Systems with Optimized Prompt Attacks](https://aclanthology.org/2025.acl-long.476/) | ACL 2025 | **retained** | ✓ |
-| 4 | [Benchmark Self-Evolving: A Multi-Agent Framework for Dynamic LLM Evaluation](https://aclanthology.org/2025.coling-main.223/) | COLING 2025 | **retained** | ✓ |
-| 5 | [FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation](https://aclanthology.org/2023.emnlp-main.741/) | Proc. Conf. Empirical Methods Natural Lang. Process. 2023 | not retained --- eval metric | ✓ |
-| 6 | [GAIA: A Benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983) | Proc. Int. Conf. Learn. Represent. 2024 | not retained --- benchmark | ✓ |
-| 7 | [IPIGuard: A Novel Tool Dependency Graph-Based Defense Against Indirect Prompt Injection in LLM Agents](https://aclanthology.org/2025.emnlp-main.53/) | Proc. Conf. Empirical Methods Natural Lang. Process. 2025 | not retained --- defense, single-agent tool use | ✓ |
-| 8 | [MCIP: Protecting MCP Safety via Model Contextual Integrity Protocol](https://aclanthology.org/2025.emnlp-main.62/) | Proc. Conf. Empirical Methods Natural Lang. Process. 2025 | not retained --- safety protocol, single-agent tool use | ✓ |
-| 9 | Accelerating the Machine Learning Lifecycle with MLflow ⚠️ | IEEE Data Engineering Bulletin 2018 | not retained --- MLOps platform |  |
-| 10 | [Model Context Protocol Threat Modeling and Analysis of Vulnerabilities to Prompt Injection with Tool Poisoning](https://doi.org/10.3390/jcp6030084) | J. Cybersecur. Privacy 2026 | not retained --- threat model, no MAS results | ✓ |
+| 2 | Accelerating the Machine Learning Lifecycle with MLflow † | IEEE Data Engineering Bulletin 2018 | not retained --- screened, criterion not met |  |
+| 3 | [AgentBench: Evaluating LLMs as Agents](https://openreview.net/forum?id=zAdUB0aCTQ) | Proc. Int. Conf. Learn. Represent. 2024 | not retained --- benchmark | ✓ |
+| 4 | [Agents Under Siege: Breaking Pragmatic Multi-Agent LLM Systems with Optimized Prompt Attacks](https://aclanthology.org/2025.acl-long.476/) | ACL 2025 | **retained** | ✓ |
+| 5 | [Benchmark Self-Evolving: A Multi-Agent Framework for Dynamic LLM Evaluation](https://aclanthology.org/2025.coling-main.223/) | COLING 2025 | **retained** | ✓ |
+| 6 | [FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation](https://aclanthology.org/2023.emnlp-main.741/) | Proc. Conf. Empirical Methods Natural Lang. Process. 2023 | not retained --- eval metric | ✓ |
+| 7 | [GAIA: A Benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983) | Proc. Int. Conf. Learn. Represent. 2024 | not retained --- benchmark | ✓ |
+| 8 | [IPIGuard: A Novel Tool Dependency Graph-Based Defense Against Indirect Prompt Injection in LLM Agents](https://aclanthology.org/2025.emnlp-main.53/) | Proc. Conf. Empirical Methods Natural Lang. Process. 2025 | not retained --- defense, single-agent tool use | ✓ |
+| 9 | [MCIP: Protecting MCP Safety via Model Contextual Integrity Protocol](https://aclanthology.org/2025.emnlp-main.62/) | Proc. Conf. Empirical Methods Natural Lang. Process. 2025 | not retained --- safety protocol, single-agent tool use | ✓ |
+| 10 | [Model Context Protocol Threat Modeling and Analysis of Vulnerabilities to Prompt Injection with Tool Poisoning](https://doi.org/10.3390/jcp6030084) † | J. Cybersecur. Privacy 2026 | not retained --- threat model, no MAS results | ✓ |
 | 11 | [OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments](https://proceedings.neurips.cc/paper_files/paper/2024/hash/5d413e48f84dc61244b6be550f1cd8f5-Abstract-Datasets_and_Benchmarks_Track.html) | Proc. Adv. Neural Inf. Process. Syst. 2024 | not retained --- benchmark | ✓ |
 | 12 | [OWASP Top 10 for Large Language Model Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) | 2023 | not retained --- standards document | ✓ |
 | 13 | [On the Resilience of LLM-Based Multi-Agent Collaboration with Faulty Agents](https://proceedings.mlr.press/v267/huang25ay.html) | ICML 2025 | **retained** | ✓ |
@@ -260,16 +260,23 @@ The pool is deduplicated by content hash, which is the rule the paper states. Tw
   - `01_overview_surveys/Multi-Agent Autonomous Driving Systems with Large Language Models_ A Survey of Recent Advances, Resources, and Future Directions.pdf` --- arXiv:2502.16804v2 preprint, 18 pp.
   - `05_industry_applications/Multi-Agent Autonomous Driving Systems with Large Language Models_ A Survey of Recent Advances, Resources, and Future Directions.pdf` --- Findings of EMNLP 2025 camera-ready, pp. 12756-12773
 - **AI Hospital: Benchmarking Large Language Models in a Multi-agent Medical Interaction Simulator**
+  - `05_industry_applications/AI Hospital_ Benchmarking Large Language Models in a Multi-agent Medical Interaction Simulator (arXiv v4).pdf` --- arXiv:2402.09742v4 preprint, 29 pp.
   - `05_industry_applications/AI Hospital_ Benchmarking Large Language Models in a Multi-agent Medical Interaction Simulator.pdf` --- COLING 2025 camera-ready, pp. 10183-10213, 31 pp.
-  - `05_industry_applications/AI Hospital_ Benchmarking Large Language Models in a Multi-agent Medical Scenario.pdf` --- arXiv:2402.09742v4 preprint, 29 pp.
 
-## ⚠️ Filenames that do not match their contents
+## † Files renamed because the name did not match the PDF
 
-Recorded rather than silently corrected, because the filename is what you see when you click through `Papers/`. The titles in the tables above are the ones on page 1 of the stored PDF.
+Every filename in this repository now matches the title on page 1 of the file stored under it. These are the ones that did not, and what they used to be called -- kept because a link into an old path, or an older clone, otherwise just loses the paper, and because a filename that named the wrong paper is a fact about how this collection was built rather than something to erase.
 
-- `04_context_engineering_icl_memory/Selective Context_ Efficient Inference with Content-Aware Prompt Compression.pdf` --- stored PDF is Li et al., "Compressing Context to Enhance Inference Efficiency of Large Language Models" (EMNLP 2023), a different paper from the one the filename names
-- `05_industry_applications/AI Hospital_ Benchmarking Large Language Models in a Multi-agent Medical Scenario.pdf` --- stored PDF is arXiv:2402.09742v4, whose title ends "...Multi-agent Medical Interaction Simulator"; "Medical Scenario" was an earlier title of the same work
-- `06_evaluation_benchmarks_safety/MLflow_ A Platform for the Machine Learning Lifecycle.pdf` --- stored PDF is Zaharia et al., "Accelerating the Machine Learning Lifecycle with MLflow" (IEEE Data Eng. Bull. 2018)
+- `03_self_evolution/EvoPrompt_ Connecting LLMs with Evolutionary Algorithms Yields Powerful Prompt Optimizers.pdf`
+  - was "...Yields Powerful Automatic Prompt Optimizer"
+- `04_context_engineering_icl_memory/Compressing Context to Enhance Inference Efficiency of Large Language Models.pdf`
+  - was "Selective Context: Efficient Inference with Content-Aware Prompt Compression", which is a different paper by the same first author
+- `05_industry_applications/AI Hospital_ Benchmarking Large Language Models in a Multi-agent Medical Interaction Simulator (arXiv v4).pdf`
+  - was "...in a Multi-agent Medical Scenario", an earlier title of this work; the suffix distinguishes it from the COLING camera-ready copy
+- `06_evaluation_benchmarks_safety/Accelerating the Machine Learning Lifecycle with MLflow.pdf`
+  - was "MLflow: A Platform for the Machine Learning Lifecycle", a different Zaharia et al. paper
+- `06_evaluation_benchmarks_safety/Model Context Protocol Threat Modeling and Analyzing Vulnerabilities to Prompt Injection with Tool Poisoning.pdf`
+  - was "Model Context Protocol Threat Modeling: Tool Poisoning and Client Security", a paraphrase rather than the paper's title
 
 ## `Papers/_not_in_pool/`
 
