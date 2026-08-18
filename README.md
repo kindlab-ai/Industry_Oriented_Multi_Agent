@@ -166,7 +166,7 @@ These are the systems every quantitative claim in the survey's empirical section
 | # | Paper | Venue / year | Status | Cited |
 |---:|---|---|---|:-:|
 | 1 | [AI Hospital: Benchmarking Large Language Models in a Multi-agent Medical Interaction Simulator](https://aclanthology.org/2025.coling-main.680/) | Proc. 31st Int. Conf. Comput. Linguistics 2025 | not retained --- screened, criterion not met | ✓ |
-| 2 | [AI Hospital: Benchmarking Large Language Models in a Multi-agent Medical Interaction Simulator](https://aclanthology.org/2025.coling-main.680/) | COLING 2025 | **retained** | ✓ |
+| 2 | [AI Hospital: Benchmarking Large Language Models in a Multi-agent Medical Interaction Simulator](https://aclanthology.org/2025.coling-main.680/) ⚠️ | COLING 2025 | **retained** | ✓ |
 | 3 | [Autonomous Agents for Scientific Discovery: Orchestrating Scientists, Language, Code, and Physics](https://arxiv.org/abs/2510.09901) | preprint 2025 | **retained** | ✓ |
 | 4 | [Autonomous Chemical Research with Large Language Models](https://doi.org/10.1038/s41586-023-06792-0) | Nature 2023 | **retained** | ✓ |
 | 5 | [DatawiseAgent: A Notebook-Centric LLM Agent Framework for Adaptive and Robust Data Science Automation](https://aclanthology.org/2025.emnlp-main.58/) | EMNLP 2025 | **retained** | ✓ |
@@ -252,11 +252,23 @@ These are the systems every quantitative claim in the survey's empirical section
 | 11 | [ICXML: An In-Context Learning Framework for Zero-Shot Extreme Multi-Label Classification](https://arxiv.org/abs/2311.09649) | arXiv 2023 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) |  |
 | 12 | [Conformal Prediction with Large Language Models for Multi-Choice Question Answering](https://arxiv.org/abs/2305.18404) | arXiv 2023 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) |  |
 
+## Papers held in two versions
+
+The pool is deduplicated by content hash, which is the rule the paper states. Two papers are present as both a preprint and a camera-ready: different bytes, different page counts, the same work. They are two documents by that rule and one paper by any other, so both copies are kept and labelled rather than one being quietly dropped.
+
+- **Multi-Agent Autonomous Driving Systems with Large Language Models: A Survey of Recent Advances, Resources, and Future Directions**
+  - `01_overview_surveys/Multi-Agent Autonomous Driving Systems with Large Language Models_ A Survey of Recent Advances, Resources, and Future Directions.pdf` --- arXiv:2502.16804v2 preprint, 18 pp.
+  - `05_industry_applications/Multi-Agent Autonomous Driving Systems with Large Language Models_ A Survey of Recent Advances, Resources, and Future Directions.pdf` --- Findings of EMNLP 2025 camera-ready, pp. 12756-12773
+- **AI Hospital: Benchmarking Large Language Models in a Multi-agent Medical Interaction Simulator**
+  - `05_industry_applications/AI Hospital_ Benchmarking Large Language Models in a Multi-agent Medical Interaction Simulator.pdf` --- COLING 2025 camera-ready, pp. 10183-10213, 31 pp.
+  - `05_industry_applications/AI Hospital_ Benchmarking Large Language Models in a Multi-agent Medical Scenario.pdf` --- arXiv:2402.09742v4 preprint, 29 pp.
+
 ## ⚠️ Filenames that do not match their contents
 
 Recorded rather than silently corrected, because the filename is what you see when you click through `Papers/`. The titles in the tables above are the ones on page 1 of the stored PDF.
 
 - `04_context_engineering_icl_memory/Selective Context_ Efficient Inference with Content-Aware Prompt Compression.pdf` --- stored PDF is Li et al., "Compressing Context to Enhance Inference Efficiency of Large Language Models" (EMNLP 2023), a different paper from the one the filename names
+- `05_industry_applications/AI Hospital_ Benchmarking Large Language Models in a Multi-agent Medical Scenario.pdf` --- stored PDF is arXiv:2402.09742v4, whose title ends "...Multi-agent Medical Interaction Simulator"; "Medical Scenario" was an earlier title of the same work
 - `06_evaluation_benchmarks_safety/MLflow_ A Platform for the Machine Learning Lifecycle.pdf` --- stored PDF is Zaharia et al., "Accelerating the Machine Learning Lifecycle with MLflow" (IEEE Data Eng. Bull. 2018)
 
 ## Provenance of this index
