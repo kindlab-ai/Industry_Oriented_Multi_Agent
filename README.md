@@ -1,192 +1,272 @@
-# Industry_Oriented_Multi_Agent
-Research and Applications of Industry-Oriented Multi-Agent Self-Evolving Context Technology
+# Industry-Oriented Multi-Agent: the paper collection
 
+Screened candidate pool for the survey **Self-Evolving Context Engineering for LLM-Based Multi-Agent Systems**.
 
+This repository is not a reading list. It is the *released set of papers* that the survey's empirical section is a census of. The survey does not claim a reproducible database query -- no Boolean string regenerates this pool -- so it publishes the pool instead, and every proportion reported in the paper is a proportion over the papers indexed here, not an estimate of a rate over all published multi-agent work.
 
-## 初筛论文列表
+## The numbers, and where to check them
 
-### A. 领域总览与奠基框架
+| | count |
+|---|---|
+| PDF paths in the library across the nine folders | 137 |
+| Distinct documents, after removing byte-identical duplicates by content hash | **125** |
+| Retained for the audit (proposes or evaluates an LLM-based multi-agent system **and** reports a quantitative main result) | **38** |
+| Not retained, each with a recorded reason | **87** |
 
-1. **Large Language Model based Multi-Agents: A Survey of Progress and Challenges**
-    多智能体 LLM 的总综述，适合用来搭综述的“背景—分类—挑战”总框架。 
-2. **Large Language Model Agent: A Survey on Methodology, Applications and Challenges**
-    虽然范围比“纯多智能体”更大，但它把 agent 的构造、协作、演化和应用域都纳入了，能帮你把“上下文技术”嵌进 agent 框架。 
-3. **CAMEL: Communicative Agents for “Mind” Exploration of Large Language Model Society**
-    2023 年非常关键的早期工作，提出 role-playing 多 agent 协作，是后续“角色分工+对话协作”路线的重要起点。 
-4. **AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversations**
-    Microsoft 的代表性框架，把复杂 LLM 应用统一成多 agent 对话编排，是“工程化多智能体系统”的标志性工作。 
-5. **MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework**
-    将 SOP（标准流程）引入多智能体协作，特别适合你“面向行业”这个角度，因为行业场景天然依赖规范流程。 
-6. **AgentVerse: Facilitating Multi-Agent Collaboration and Exploring Emergent Behaviors**
-    更强调多 agent 协作与涌现行为，适合写“多智能体系统形态”这一节。 
-7. **ChatDev: Communicative Agents for Software Development**（ACL 2024）
-    顶会论文，而且是“行业应用=软件工程”的典型案例，适合做应用章节里的重点案例。 
-8. **Mixture-of-Agents Enhances Large Language Model Capabilities**
-    这篇不是传统 workflow 型 MAS，但它代表了“多 agent 聚合提升能力”的另一条路线，适合放在协作范式比较里。 
+12 papers are cross-filed under two topical folders with identical bytes, which is why the two counts differ. This repository stores each document once, under the folder the audit refers to it by; the *also filed under* column of `index/papers.csv` records the other location. The distinction matters when reading proportions: a rate over 125 documents is not a rate over 137 filings.
 
-------
+The per-system coding behind the audit is released with the paper's supplement as `e1_audit.csv` (38 rows), `e2_audit.csv` (760 cells) and `excluded.csv` (the exclusion ledger). `index/papers.csv` in this repository is the same index as the tables below, machine-readable.
 
-### B. 多智能体“自进化/自改进”方向
+## Folders
 
-1. **360°REA: Towards A Reusable Experience Accumulation with 360° Assessment for Multi-Agent System**（Findings of ACL 2024）
-    这篇非常贴你的题：多 agent、评估反馈、经验池、可复用经验积累，已经明显触到“自进化上下文”的雏形。 
-2. **SiriuS: Self-improving Multi-agent Systems via Bootstrapped Reasoning**（NeurIPS 2025）
-    重点是 experience library 和 bootstrapped reasoning，适合写“从反思到经验库”的自进化路线。 
-3. **Multi-Agent Evolve (MAE): LLM Self-Improve through Multi-Agent Co-evolution**
-    提出 Proposer–Solver–Judge 三角色闭环，用 RL 做共同进化，是“co-evolution”关键词的代表作。 
-4. **CoMAS: Co-Evolving Multi-Agent Systems via Interaction Rewards**
-    亮点是不用外部监督，而从 agent 交互中构造 intrinsic rewards，代表更强的“自主进化”取向。 
-5. **EvolveR: Self-Evolving LLM Agents through an Experience Lifecycle**
-    更偏 agent 自我改进闭环，适合放到“经验驱动的进化机制”小节。 
-6. **MorphAgent: Empowering Agents through Self-Evolving Profiles**
-    关注 agent profile/role 的动态演化，适合和 CAMEL、MetaGPT 这种静态角色设计形成对照。 
-7. **Multi-Agent Collaboration via Evolving Orchestration**
-    从 orchestrator 角度做动态调度，不是直接优化 agent 能力，而是优化组织方式，很适合你写“系统级自进化”。 
-8. **ACC-Collab: An Actor-Critic Approach to Multi-Agent LLM Collaboration**
-    用 actor-critic 学协作，说明多智能体不是只能靠 prompt 设计，也能走学习型协作优化。 
+| Folder | Topic | Papers | Retained |
+|---|---|---:|---:|
+| `Papers/01_overview_surveys/` | Overview surveys | 7 | 0 |
+| `Papers/02_multi_agent_frameworks/` | Multi-agent frameworks | 14 | 11 |
+| `Papers/03_self_evolution/` | Self-evolution | 18 | 10 |
+| `Papers/04_context_engineering_icl_memory/` | Context engineering, ICL, and memory | 20 | 0 |
+| `Papers/05_industry_applications/` | Industry applications | 15 | 10 |
+| `Papers/06_evaluation_benchmarks_safety/` | Evaluation, benchmarks, and safety | 20 | 5 |
+| `Papers/07_frontier_2025_2026/` | Frontier 2025–2026 | 1 | 0 |
+| `Papers/08_demo_selection_icl_sota/` | Demonstration selection | 18 | 2 |
+| `Papers/09_coverage_budget_conformal/` | Coverage and budget methods | 12 | 0 |
 
-------
+Folders 08 and 09 were assembled for a separate line of work on demonstration selection and were screened by the same criterion as the rest; two of their papers (ConsensAgent, M2CL) are multi-agent systems and were retained. They are part of the pool and are published here for that reason.
 
-### C. “上下文技术”主线：从 ICL 到 context engineering，再到 context evolution
+## The audit corpus (38 retained systems)
 
-1. **Language Models are Few-Shot Learners**（NeurIPS 2020）
-    ICL 的奠基论文，综述里一定要交代，因为你导师已经点名“上下文包含之前的 in-context learning 等内容”。 
-2. **Rethinking the Role of Demonstrations: What Makes In-Context Learning Work?**
-    这篇非常关键，解释 ICL 到底依赖什么，为你后面写“context 不是简单提示词，而是可设计的信息载荷”提供理论过渡。 
-3. **A Survey on In-context Learning**（EMNLP 2024）
-    ICL 的系统综述，直接作为上下文技术背景综述的主参考。 
-4. **The Mystery of In-Context Learning: A Comprehensive Survey on Interpretation and Analysis**（EMNLP 2024）
-    更偏机制解释与分析，适合在“理论基础”里和上一篇搭配。 
-5. **A Survey of Context Engineering for Large Language Models**
-    这是你题目里“上下文技术”最贴近的综述，明确把 context retrieval、generation、processing、management 整体化了。 
-6. **PromptAgent: Strategic Planning with Language Models Enables Expert-level Prompt Optimization**
-    把 prompt/context 优化视为规划问题，是从“人工写 prompt”走向“自动进化上下文”的重要桥梁。 
-7. **EvoPrompt: Connecting LLMs with Evolutionary Algorithms Yields Powerful Prompt Optimizers**
-    这是“进化”与“上下文/提示优化”最直接的连接点，建议必读。 
-8. **Tree of Agents: Improving Long-Context Capabilities of LLMs through Multi-Perspective Reasoning**
-    这篇很好地把“多 agent”与“long-context”连接起来，非常适合你的交叉主题。 
-9. **LongLeader: A Comprehensive Leaderboard for Large Language Models in Long Context**
-    做上下文综述时，不能只谈方法，还要谈评测；这篇适合放在长上下文评测部分。 
-10. **MemBench: Towards More Comprehensive Evaluation on the Memory of LLM Agents**
-     如果你把“上下文”扩展到 memory，这篇很值得放进评测部分。 
+These are the systems every quantitative claim in the survey's empirical section is computed over. Γ is the resource-equivalent collaboration gain; `cost` is what the paper reports about its own token or call cost.
 
-------
+| System | Paper | Venue / year | Mechanism | Γ | Cost |
+|---|---|---|---|---|---|
+| 360°REA | [360°REA: Towards A Reusable Experience Accumulation with 360° Assessment for Multi-Agent System](https://aclanthology.org/2024.findings-acl.778/) | Findings-ACL 2024 | evolution | no | N |
+| ACE | [Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models](https://openreview.net/forum?id=eC4ygDs02R) | ICLR 2026 | evolution | no | full |
+| AgentDropout | [AgentDropout: Dynamic Agent Elimination for Token-Efficient and High-Performance LLM-Based Multi-Agent Collaboration](https://aclanthology.org/2025.acl-long.1170/) | ACL 2025 | topology | yes | full |
+| Agents Under Siege | [Agents Under Siege: Breaking Pragmatic Multi-Agent LLM Systems with Optimized Prompt Attacks](https://aclanthology.org/2025.acl-long.476/) | ACL 2025 | other | no | N |
+| AgentVerse | [AgentVerse: Facilitating Multi-Agent Collaboration and Exploring Emergent Behaviors](https://openreview.net/forum?id=EHg5GDnyq1) | ICLR 2024 | role-play | no | N |
+| AI Hospital | [AI Hospital: Benchmarking Large Language Models in a Multi-agent Medical Interaction Simulator](https://aclanthology.org/2025.coling-main.680/) | COLING 2025 | role-play | no | N |
+| AutoGen | [AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversations](https://openreview.net/forum?id=BAakY1hNKS) | COLM 2024 | workflow | no | N |
+| Benchmark Self-Evolving | [Benchmark Self-Evolving: A Multi-Agent Framework for Dynamic LLM Evaluation](https://aclanthology.org/2025.coling-main.223/) | COLING 2025 | evolution | no | N |
+| Beyond Frameworks | [Beyond Frameworks: Unpacking Collaboration Strategies in Multi-Agent Systems](https://aclanthology.org/2025.acl-long.1037/) | ACL 2025 | other | no | partial |
+| CAMEL | [CAMEL: Communicative Agents for Mind Exploration of Large Language Model Society](https://doi.org/10.52202/075280-2264) | NeurIPS 2023 | role-play | no | N |
+| ChatDev | [ChatDev: Communicative Agents for Software Development](https://aclanthology.org/2024.acl-long.810/) | ACL 2024 | workflow | no | full |
+| CoMAS | [CoMAS: Co-Evolving Multi-Agent Systems via Interaction Rewards](https://openreview.net/forum?id=ihwAzktmWc) | ICLR 2026 | evolution | yes | N |
+| CONSENSAGENT | ConsensAgent: Towards Efficient and Effective Consensus in Multi-Agent LLM Interactions through Sycophancy Mitigation | ACL 2025 | debate | yes | partial |
+| Coscientist | [Autonomous Chemical Research with Large Language Models](https://doi.org/10.1038/s41586-023-06792-0) | Nature 2023 | workflow | no | N |
+| DatawiseAgent | [DatawiseAgent: A Notebook-Centric LLM Agent Framework for Adaptive and Robust Data Science Automation](https://aclanthology.org/2025.emnlp-main.58/) | EMNLP 2025 | workflow | no | N |
+| DriveAgent | [DriveAgent: Multi-Agent Structured Reasoning With LLM and Multimodal Sensor Fusion for Autonomous Driving](https://doi.org/10.1109/LRA.2025.3619807) | preprint 2025 | workflow | no | N |
+| DrugAgent | [DrugAgent: Automating AI-aided Drug Discovery Programming through LLM Multi-Agent Collaboration](https://arxiv.org/abs/2411.15692) | preprint 2024 | workflow | no | N |
+| Earnings-Call Agents | [From Earnings Calls to Investment Reports: Evaluating Role-based Multi-Agent LLM Systems](https://aclanthology.org/2025.finnlp-2.19/) | preprint 2025 | role-play | no | N |
+| EvolveR | [EvolveR: Self-Evolving LLM Agents through an Experience-Driven Lifecycle](https://arxiv.org/abs/2510.16079) | preprint 2026 | evolution | no | N |
+| Failure Attribution | [Which Agent Causes Task Failures and When? On Automated Failure Attribution of LLM Multi-Agent Systems](https://arxiv.org/pdf/2505.00212) | ICML 2025 | other | no | N |
+| Generative Agents | [Generative Agents: Interactive Simulacra of Human Behavior](https://doi.org/10.1145/3586183.3606763) | UIST 2023 | role-play | no | N |
+| GenPilot | [GenPilot: A Multi-Agent System for Test-Time Prompt Optimization in Image Generation](https://aclanthology.org/2025.findings-emnlp.49/) | EMNLP 2025 | evolution | no | N |
+| Loosely-Structured SW | [Loosely-Structured Software: Engineering Context, Structure, and Evolution Entropy in Runtime-Rewired Multi-Agent Systems](https://arxiv.org/abs/2603.15690) | preprint 2026 | topology | no | partial |
+| M2CL | [Context Learning for Multi-Agent Discussion](https://arxiv.org/abs/2602.02350) | ICLR 2026 | debate | no | N |
+| MacNet | [Scaling Large Language Model-based Multi-Agent Collaboration](https://openreview.net/forum?id=K3n5jPkrU6) | ICLR 2025 | topology | no | N |
+| MegaAgent | [MegaAgent: A Large-Scale Autonomous LLM-based Multi-Agent System Without Predefined SOPs](https://aclanthology.org/2025.findings-acl.259/) | Findings-ACL 2025 | hierarchy | no | partial |
+| MetaGPT | [MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework](https://openreview.net/forum?id=VtmBAGCN7o) | ICLR 2024 | workflow | no | partial |
+| Mixture-of-Agents | [Mixture-of-Agents Enhances Large Language Model Capabilities](https://openreview.net/forum?id=h0ZfDIrj7T) | ICLR 2025 | aggregation | yes | partial |
+| MorphAgent | [MorphAgent: Empowering Agents through Self-Evolving Profiles and Decentralized Collaboration](https://arxiv.org/abs/2410.15048) | preprint 2024 | evolution | no | N |
+| Multi-Agent Evolve | [Multi-Agent Evolve: LLM Self-Improve through Co-evolution](https://arxiv.org/abs/2510.23595) | ICLR 2026 (under review) | evolution | no | N |
+| Multiagent Finetuning | [Multiagent Finetuning: Self Improvement with Diverse Reasoning Chains](https://openreview.net/forum?id=JtGPIZpOrz) | ICLR 2025 | evolution | no | N |
+| MultiAgentESC | [MultiAgentESC: A LLM-based Multi-Agent Collaboration Framework for Emotional Support Conversation](https://aclanthology.org/2025.emnlp-main.232/) | EMNLP 2025 | debate | yes | N |
+| QuantAgents | [QuantAgents: Towards Multi-agent Financial System via Simulated Trading](https://aclanthology.org/2025.findings-emnlp.945/) | preprint 2025 | role-play | no | N |
+| Resilience w/ Faulty Agents | [On the Resilience of LLM-Based Multi-Agent Collaboration with Faulty Agents](https://proceedings.mlr.press/v267/huang25ay.html) | ICML 2025 | other | no | N |
+| Sci. Discovery Agents | [Autonomous Agents for Scientific Discovery: Orchestrating Scientists, Language, Code, and Physics](https://arxiv.org/abs/2510.09901) | preprint 2025 | workflow | no | N |
+| SiriuS | [SiriuS: Self-improving Multi-agent Systems via Bootstrapped Reasoning](https://openreview.net/forum?id=IDSTtDw4Cs) | ICLR 2025 WS | evolution | no | N |
+| TriageAgent | [TriageAgent: Towards Better Multi-Agents Collaborations for Large Language Model-Based Clinical Triage](https://aclanthology.org/2024.findings-emnlp.329/) | Findings-EMNLP 2024 | debate | yes | full |
+| When Allies Turn Foes | [When Allies Turn Foes: Exploring Group Characteristics of LLM-Based Multi-Agent Collaborative Systems Under Adversarial Attacks](https://aclanthology.org/2025.findings-emnlp.333/) | preprint 2025 | other | no | N |
 
-### D. 行业应用：
+## The full pool
 
-#### 1）软件工程
+`retained` marks the 38 systems above. Every other row carries the reason it was screened out; those reasons are the exclusion ledger of the paper's appendix, reproduced here per paper rather than in bulk. *Cited* records whether the survey cites the work somewhere in its body -- being outside the audit corpus is a statement about what can be counted, not about relevance, and many excluded papers are cited.
 
-1. **ChatDev**（ACL 2024）
-    多 agent 做需求—设计—编码—测试，是最典型的软件工程应用。 
-2. **MetaGPT**
-    SOP 驱动的软件工程/任务分解框架，也可以放进软件工程应用节。 
+### `01_overview_surveys` --- Overview surveys
 
-#### 2）医疗健康
+| # | Paper | Venue / year | Status | Cited |
+|---:|---|---|---|:-:|
+| 1 | [A Comprehensive Survey of Self-Evolving AI Agents: A New Paradigm Bridging Foundation Models and Lifelong Agentic Systems](https://arxiv.org/abs/2508.07407) | arXiv preprint 2025 | not retained --- survey | ✓ |
+| 2 | [A Survey of Context Engineering for Large Language Models](https://arxiv.org/abs/2507.13334) | arXiv preprint 2025 | not retained --- survey | ✓ |
+| 3 | [A Survey of Self-Evolving Agents: What, When, How, and Where to Evolve on the Path to Artificial Super Intelligence](https://openreview.net/forum?id=CTr3bovS5F) | Trans. Mach. Learn. Res. 2026 | not retained --- survey | ✓ |
+| 4 | [A Survey on In-context Learning](https://aclanthology.org/2024.emnlp-main.64/) | Proc. Conf. Empirical Methods Natural Lang. Process. 2024 | not retained --- survey | ✓ |
+| 5 | [Creativity in LLM-based Multi-Agent Systems: A Survey](https://aclanthology.org/2025.emnlp-main.1403/) | Proc. Conf. Empirical Methods Natural Lang. Process. 2025 | not retained --- survey | ✓ |
+| 6 | [Large Language Model Based Multi-Agents: A Survey of Progress and Challenges](https://www.ijcai.org/proceedings/2024/890) | Proc. 33rd Int. Joint Conf. Artif. Intell. 2024 | not retained --- survey | ✓ |
+| 7 | [Multi-Agent Autonomous Driving Systems with Large Language Models: A Survey of Recent Advances, Resources, and Future Directions](https://aclanthology.org/2025.findings-emnlp.683/) | Findings Assoc. Comput. Linguistics: EMNLP 2025 | not retained --- survey | ✓ |
 
-1. **TriageAgent: Towards Better Multi-Agents Collaborations for Large Language Model-Based Clinical Triage**（Findings of EMNLP 2024）
-    临床分诊是非常实用的行业任务，这篇既有明确场景，也有多轮协作设计。 
-2. **AI Hospital: Benchmarking Large Language Models in a Multi-agent Medical Scenario**
-    医疗多 agent benchmark，很适合支撑“行业应用需要专门评测框架”这个观点。 
-3. **MultiAgentESC: A LLM-based Multi-Agent Collaboration Framework for Emotional Support Conversation**
-    偏心理健康支持，也可以作为“医疗/健康服务”子方向案例。 
+### `02_multi_agent_frameworks` --- Multi-agent frameworks
 
-#### 3）金融
+| # | Paper | Venue / year | Status | Cited |
+|---:|---|---|---|:-:|
+| 1 | [AgentDropout: Dynamic Agent Elimination for Token-Efficient and High-Performance LLM-Based Multi-Agent Collaboration](https://aclanthology.org/2025.acl-long.1170/) | ACL 2025 | **retained** | ✓ |
+| 2 | [AgentVerse: Facilitating Multi-Agent Collaboration and Exploring Emergent Behaviors](https://openreview.net/forum?id=EHg5GDnyq1) | ICLR 2024 | **retained** | ✓ |
+| 3 | [AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversations](https://openreview.net/forum?id=BAakY1hNKS) | COLM 2024 | **retained** | ✓ |
+| 4 | [Beyond Frameworks: Unpacking Collaboration Strategies in Multi-Agent Systems](https://aclanthology.org/2025.acl-long.1037/) | ACL 2025 | **retained** | ✓ |
+| 5 | [CAMEL: Communicative Agents for Mind Exploration of Large Language Model Society](https://doi.org/10.52202/075280-2264) | NeurIPS 2023 | **retained** | ✓ |
+| 6 | [ChatDev: Communicative Agents for Software Development](https://aclanthology.org/2024.acl-long.810/) | ACL 2024 | **retained** | ✓ |
+| 7 | [Loosely-Structured Software: Engineering Context, Structure, and Evolution Entropy in Runtime-Rewired Multi-Agent Systems](https://arxiv.org/abs/2603.15690) | preprint 2026 | **retained** | ✓ |
+| 8 | [MAgIC: Investigation of Large Language Model Powered Multi-Agent in Cognition, Adaptability, Rationality and Collaboration](https://aclanthology.org/2024.emnlp-main.416/) | Proc. Conf. Empirical Methods Natural Lang. Process. 2024 | not retained --- benchmark of MAS, proposes no MAS method | ✓ |
+| 9 | [MegaAgent: A Large-Scale Autonomous LLM-based Multi-Agent System Without Predefined SOPs](https://aclanthology.org/2025.findings-acl.259/) | Findings-ACL 2025 | **retained** | ✓ |
+| 10 | [MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework](https://openreview.net/forum?id=VtmBAGCN7o) | ICLR 2024 | **retained** | ✓ |
+| 11 | [Mixture-of-Agents Enhances Large Language Model Capabilities](https://openreview.net/forum?id=h0ZfDIrj7T) | ICLR 2025 | **retained** | ✓ |
+| 12 | [MultiAgentBench: Evaluating the Collaboration and Competition of LLM agents](https://aclanthology.org/2025.acl-long.421/) | Proc. 63rd Annu. Meeting Assoc. Comput. Linguistics 2025 | not retained --- benchmark | ✓ |
+| 13 | [Scaling Large Language Model-based Multi-Agent Collaboration](https://openreview.net/forum?id=K3n5jPkrU6) | ICLR 2025 | **retained** | ✓ |
+| 14 | [Towards a Science of Collective AI: LLM-based Multi-Agent Systems Need a Transition from Blind Trial-and-Error to Rigorous Science](https://arxiv.org/abs/2602.05289) | arXiv preprint 2026 | not retained --- position paper |  |
 
-1. **Large Language Model Agents in Finance: A Survey Bridging Research, Practice, and Real-World Deployment**（Findings of EMNLP 2025）
-    金融场景综述，非常适合拿来梳理“行业约束、合规性、部署需求”。 
-2. **QuantAgents: Towards Multi-agent Financial System via Simulated Trading**
-    这是更接近实际金融工作流的多 agent 案例。 
-3. **From Earnings Calls to Investment Reports: Evaluating Role-based Multi-Agent LLM Systems**
-    偏投研报告生成，能体现“行业化角色分工”的实际价值。 
+### `03_self_evolution` --- Self-evolution
 
-#### 4）自动驾驶
+| # | Paper | Venue / year | Status | Cited |
+|---:|---|---|---|:-:|
+| 1 | [360°REA: Towards A Reusable Experience Accumulation with 360° Assessment for Multi-Agent System](https://aclanthology.org/2024.findings-acl.778/) | Findings-ACL 2024 | **retained** | ✓ |
+| 2 | [Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models](https://openreview.net/forum?id=eC4ygDs02R) | ICLR 2026 | **retained** | ✓ |
+| 3 | [CoMAS: Co-Evolving Multi-Agent Systems via Interaction Rewards](https://openreview.net/forum?id=ihwAzktmWc) | ICLR 2026 | **retained** | ✓ |
+| 4 | [EvoPrompt: Connecting LLMs with Evolutionary Algorithms Yields Powerful Prompt Optimizers](https://openreview.net/forum?id=zg3PuXyH2X) | Proc. Int. Conf. Learn. Represent. 2024 | not retained --- single agent | ✓ |
+| 5 | [EvoPrompting: Language Models for Code-Level Neural Architecture Search](https://arxiv.org/abs/2302.14838) | NeurIPS 2023 | not retained --- single agent (NAS) |  |
+| 6 | [EvolveR: Self-Evolving LLM Agents through an Experience-Driven Lifecycle](https://arxiv.org/abs/2510.16079) | preprint 2026 | **retained** | ✓ |
+| 7 | [GenPilot: A Multi-Agent System for Test-Time Prompt Optimization in Image Generation](https://aclanthology.org/2025.findings-emnlp.49/) | EMNLP 2025 | **retained** | ✓ |
+| 8 | [Generative Agents: Interactive Simulacra of Human Behavior](https://doi.org/10.1145/3586183.3606763) | UIST 2023 | **retained** | ✓ |
+| 9 | [Gödel Agent: A Self-Referential Agent Framework for Recursively Self-Improvement](https://aclanthology.org/2025.acl-long.1354/) | Proc. 63rd Annu. Meeting Assoc. Comput. Linguistics 2025 | not retained --- single agent | ✓ |
+| 10 | [MorphAgent: Empowering Agents through Self-Evolving Profiles and Decentralized Collaboration](https://arxiv.org/abs/2410.15048) | preprint 2024 | **retained** | ✓ |
+| 11 | [Multi-Agent Evolve: LLM Self-Improve through Co-evolution](https://arxiv.org/abs/2510.23595) | ICLR 2026 (under review) | **retained** | ✓ |
+| 12 | [Multiagent Finetuning: Self Improvement with Diverse Reasoning Chains](https://openreview.net/forum?id=JtGPIZpOrz) | ICLR 2025 | **retained** | ✓ |
+| 13 | [PromptAgent: Strategic Planning with Large Language Models Enables Expert-Level Prompt Optimization](https://openreview.net/forum?id=22pyNMuIoa) | Proc. Int. Conf. Learn. Represent. 2024 | not retained --- single agent | ✓ |
+| 14 | [Reflexion: Language Agents with Verbal Reinforcement Learning](https://arxiv.org/abs/2303.11366) | Proc. Adv. Neural Inf. Process. Syst. 2023 | not retained --- single agent | ✓ |
+| 15 | [Self-Refine: Iterative Refinement with Self-Feedback](https://arxiv.org/abs/2303.17651) | Proc. Adv. Neural Inf. Process. Syst. 2023 | not retained --- single agent | ✓ |
+| 16 | [SiriuS: Self-improving Multi-agent Systems via Bootstrapped Reasoning](https://openreview.net/forum?id=IDSTtDw4Cs) | ICLR 2025 WS | **retained** | ✓ |
+| 17 | [Optimizing generative AI by backpropagating language model feedback](https://doi.org/10.1038/s41586-025-08661-4) | Nature 2025 | not retained --- single agent | ✓ |
+| 18 | [Voyager: An Open-Ended Embodied Agent with Large Language Models](https://openreview.net/forum?id=ehfRiF0R3a) | Trans. Mach. Learn. Res. 2024 | not retained --- single agent | ✓ |
 
-1. **Multi-Agent Autonomous Driving Systems with Large Language Models: A Survey of Recent Advances, Resources, and Future Directions**（Findings of EMNLP 2025）
-    自动驾驶是“多主体协同+安全约束”极强的行业，非常适合你这个题。 
-2. **DriveAgent: Multi-Agent Structured Reasoning with LLM and Multimodal Sensor Fusion for Autonomous Driving**
-    体现了“多 agent + 多模态感知 + 决策上下文”的结合。 
+### `04_context_engineering_icl_memory` --- Context engineering, ICL, and memory
 
-#### 5）科学发现 / 生物医药
+| # | Paper | Venue / year | Status | Cited |
+|---:|---|---|---|:-:|
+| 1 | [Enabling Large Language Models to Generate Text with Citations](https://aclanthology.org/2023.emnlp-main.398/) | EMNLP 2023 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) |  |
+| 2 | [FreshLLMs: Refreshing Large Language Models with Search Engine Augmentation](https://aclanthology.org/2024.findings-acl.813/) | Findings Assoc. Comput. Linguistics: ACL 2024 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
+| 3 | [LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models](https://doi.org/10.18653/v1/2023.emnlp-main.825) | Proc. Conf. Empirical Methods Natural Lang. Process. 2023 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
+| 4 | [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165) | Proc. Adv. Neural Inf. Process. Syst. 2020 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
+| 5 | [LongBench: A Bilingual, Multitask Benchmark for Long Context Understanding](https://aclanthology.org/2024.acl-long.172/) | Proc. 62nd Annu. Meeting Assoc. Comput. Linguistics 2024 | not retained --- benchmark | ✓ |
+| 6 | [LongLLMLingua: Accelerating and Enhancing LLMs in Long Context Scenarios via Prompt Compression](https://doi.org/10.18653/v1/2024.acl-long.91) | Proc. 62nd Annu. Meeting Assoc. Comput. Linguistics 2024 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
+| 7 | [LongLeader: A Comprehensive Leaderboard for Large Language Models in Long-context Scenarios](https://aclanthology.org/2025.naacl-long.439/) | Proc. Conf. Nations Americas Chapter Assoc. Comput. Linguistics: Human Lang. Technol. 2025 | not retained --- benchmark | ✓ |
+| 8 | [Lost in the Middle: How Language Models Use Long Contexts](https://aclanthology.org/2024.tacl-1.9/) | Trans. Assoc. Comput. Linguistics 2024 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
+| 9 | [Measuring Attribution in Natural Language Generation Models](https://arxiv.org/abs/2112.12870) | Computational Linguistics 2023 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) |  |
+| 10 | [MemBench: Towards More Comprehensive Evaluation on the Memory of LLM-based Agents](https://aclanthology.org/2025.findings-acl.989/) | Findings Assoc. Comput. Linguistics: ACL 2025 | not retained --- benchmark | ✓ |
+| 11 | [MemGPT: Towards LLMs as Operating Systems](https://arxiv.org/abs/2310.08560) | arXiv preprint 2023 | not retained --- single agent | ✓ |
+| 12 | [RECOMP: Improving Retrieval-Augmented LMs with Compression and Selective Augmentation](https://arxiv.org/abs/2310.04408) | ICLR 2024 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) |  |
+| 13 | [ReAct: Synergizing Reasoning and Acting in Language Models](https://openreview.net/forum?id=WE_vluYUL-X) | Proc. Int. Conf. Learn. Represent. 2023 | not retained --- single agent | ✓ |
+| 14 | [Rethinking the Role of Demonstrations: What Makes In-Context Learning Work?](https://aclanthology.org/2022.emnlp-main.759/) | Proc. Conf. Empirical Methods Natural Lang. Process. 2022 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
+| 15 | [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401) | Proc. Adv. Neural Inf. Process. Syst. 2020 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
+| 16 | [Compressing Context to Enhance Inference Efficiency of Large Language Models](https://aclanthology.org/2023.emnlp-main.391/) ⚠️ | EMNLP 2023 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) |  |
+| 17 | [The Mystery of In-Context Learning: A Comprehensive Survey on Interpretation and Analysis](https://aclanthology.org/2024.emnlp-main.795/) | Proc. Conf. Empirical Methods Natural Lang. Process. 2024 | not retained --- survey | ✓ |
+| 18 | [Toolformer: Language Models Can Teach Themselves to Use Tools](https://openreview.net/forum?id=Yacmpz84TH) | Proc. Adv. Neural Inf. Process. Syst. 2023 | not retained --- single agent | ✓ |
+| 19 | [Tree of Agents: Improving Long-Context Capabilities of Large Language Models through Multi-Perspective Reasoning](https://aclanthology.org/2025.findings-emnlp.246/) | Findings Assoc. Comput. Linguistics: EMNLP 2025 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
+| 20 | What Makes Good In-Context Examples for GPT-3? | Proc. 3rd Workshop Knowl. Extraction Integr. Deep Learn. Architectures (DeeLIO) 2022 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
 
-1. **DrugAgent: Automating AI-aided Drug Discovery Programming through LLM Multi-Agent Collaboration**
-    很适合作为“科研/医药工业场景”的代表。 
-2. **Autonomous Agents for Scientific Discovery: Orchestrating Scientists and Robots through LLM-based Agents**
-    更偏前沿科研自动化，适合放到“未来高价值行业场景”。 
+### `05_industry_applications` --- Industry applications
 
-------
+| # | Paper | Venue / year | Status | Cited |
+|---:|---|---|---|:-:|
+| 1 | [AI Hospital: Benchmarking Large Language Models in a Multi-agent Medical Interaction Simulator](https://aclanthology.org/2025.coling-main.680/) | Proc. 31st Int. Conf. Comput. Linguistics 2025 | not retained --- screened, criterion not met | ✓ |
+| 2 | [AI Hospital: Benchmarking Large Language Models in a Multi-agent Medical Interaction Simulator](https://aclanthology.org/2025.coling-main.680/) | COLING 2025 | **retained** | ✓ |
+| 3 | [Autonomous Agents for Scientific Discovery: Orchestrating Scientists, Language, Code, and Physics](https://arxiv.org/abs/2510.09901) | preprint 2025 | **retained** | ✓ |
+| 4 | [Autonomous Chemical Research with Large Language Models](https://doi.org/10.1038/s41586-023-06792-0) | Nature 2023 | **retained** | ✓ |
+| 5 | [DatawiseAgent: A Notebook-Centric LLM Agent Framework for Adaptive and Robust Data Science Automation](https://aclanthology.org/2025.emnlp-main.58/) | EMNLP 2025 | **retained** | ✓ |
+| 6 | [DriveAgent: Multi-Agent Structured Reasoning With LLM and Multimodal Sensor Fusion for Autonomous Driving](https://doi.org/10.1109/LRA.2025.3619807) | preprint 2025 | **retained** | ✓ |
+| 7 | [DrugAgent: Automating AI-aided Drug Discovery Programming through LLM Multi-Agent Collaboration](https://arxiv.org/abs/2411.15692) | preprint 2024 | **retained** | ✓ |
+| 8 | [From Earnings Calls to Investment Reports: Evaluating Role-based Multi-Agent LLM Systems](https://aclanthology.org/2025.finnlp-2.19/) | preprint 2025 | **retained** | ✓ |
+| 9 | [Large Language Model Agents in Finance: A Survey Bridging Research, Practice, and Real-World Deployment](https://aclanthology.org/2025.findings-emnlp.972/) | Findings Assoc. Comput. Linguistics: EMNLP 2025 | not retained --- survey | ✓ |
+| 10 | [Multi-Agent Autonomous Driving Systems with Large Language Models: A Survey of Recent Advances, Resources, and Future Directions](https://aclanthology.org/2025.findings-emnlp.683/) | Findings Assoc. Comput. Linguistics: EMNLP 2025 | not retained --- survey | ✓ |
+| 11 | [MultiAgentESC: A LLM-based Multi-Agent Collaboration Framework for Emotional Support Conversation](https://aclanthology.org/2025.emnlp-main.232/) | EMNLP 2025 | **retained** | ✓ |
+| 12 | [QuantAgents: Towards Multi-agent Financial System via Simulated Trading](https://aclanthology.org/2025.findings-emnlp.945/) | preprint 2025 | **retained** | ✓ |
+| 13 | [SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering](https://openreview.net/forum?id=mXpq6ut8J3) | Proc. Adv. Neural Inf. Process. Syst. 2024 | not retained --- single agent | ✓ |
+| 14 | [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770) | arXiv preprint 2024 | not retained --- benchmark | ✓ |
+| 15 | [TriageAgent: Towards Better Multi-Agents Collaborations for Large Language Model-Based Clinical Triage](https://aclanthology.org/2024.findings-emnlp.329/) | Findings-EMNLP 2024 | **retained** | ✓ |
 
-### E. 评测与基准
+### `06_evaluation_benchmarks_safety` --- Evaluation, benchmarks, and safety
 
-1. **MAgIC: Investigation of LLM Powered Multi-Agent in Cognition, Adaptability, Rationality and Collaboration**（EMNLP 2024）
-    多智能体评测的代表作之一，建议放在“评测维度与benchmark”部分。 
-2. **MultiAgentBench: Evaluating the Collaboration and Competition of LLM Agents**（ACL 2025）
-    强调 collaboration 和 competition 的综合评测，很适合综述里做 benchmark 表。 
-3. **Benchmark Self-Evolving: A Multi-Agent Framework for Dynamic LLM Evaluation**
-    这篇适合你“自进化”主题，因为它连评测集合本身都在动态演化。 
-4. **Scaling Large Language Model-based Multi-Agent Collaboration**（ICLR 2025）
-    讨论多 agent 数量、拓扑结构、协作扩展性，属于很关键的“系统规律”论文
+| # | Paper | Venue / year | Status | Cited |
+|---:|---|---|---|:-:|
+| 1 | [ARES: An Automated Evaluation Framework for Retrieval-Augmented Generation Systems](https://aclanthology.org/2024.naacl-long.20/) | Proc. Conf. North Amer. Chapter Assoc. Comput. Linguistics: Human Lang. Technol. 2024 | not retained --- eval framework | ✓ |
+| 2 | [AgentBench: Evaluating LLMs as Agents](https://openreview.net/forum?id=zAdUB0aCTQ) | Proc. Int. Conf. Learn. Represent. 2024 | not retained --- benchmark | ✓ |
+| 3 | [Agents Under Siege: Breaking Pragmatic Multi-Agent LLM Systems with Optimized Prompt Attacks](https://aclanthology.org/2025.acl-long.476/) | ACL 2025 | **retained** | ✓ |
+| 4 | [Benchmark Self-Evolving: A Multi-Agent Framework for Dynamic LLM Evaluation](https://aclanthology.org/2025.coling-main.223/) | COLING 2025 | **retained** | ✓ |
+| 5 | [FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation](https://aclanthology.org/2023.emnlp-main.741/) | Proc. Conf. Empirical Methods Natural Lang. Process. 2023 | not retained --- eval metric | ✓ |
+| 6 | [GAIA: A Benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983) | Proc. Int. Conf. Learn. Represent. 2024 | not retained --- benchmark | ✓ |
+| 7 | [IPIGuard: A Novel Tool Dependency Graph-Based Defense Against Indirect Prompt Injection in LLM Agents](https://aclanthology.org/2025.emnlp-main.53/) | Proc. Conf. Empirical Methods Natural Lang. Process. 2025 | not retained --- defense, single-agent tool use | ✓ |
+| 8 | [MCIP: Protecting MCP Safety via Model Contextual Integrity Protocol](https://aclanthology.org/2025.emnlp-main.62/) | Proc. Conf. Empirical Methods Natural Lang. Process. 2025 | not retained --- safety protocol, single-agent tool use | ✓ |
+| 9 | Accelerating the Machine Learning Lifecycle with MLflow ⚠️ | IEEE Data Engineering Bulletin 2018 | not retained --- MLOps platform |  |
+| 10 | [Model Context Protocol Threat Modeling and Analysis of Vulnerabilities to Prompt Injection with Tool Poisoning](https://doi.org/10.3390/jcp6030084) | J. Cybersecur. Privacy 2026 | not retained --- threat model, no MAS results | ✓ |
+| 11 | [OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments](https://proceedings.neurips.cc/paper_files/paper/2024/hash/5d413e48f84dc61244b6be550f1cd8f5-Abstract-Datasets_and_Benchmarks_Track.html) | Proc. Adv. Neural Inf. Process. Syst. 2024 | not retained --- benchmark | ✓ |
+| 12 | [OWASP Top 10 for Large Language Model Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) | 2023 | not retained --- standards document | ✓ |
+| 13 | [On the Resilience of LLM-Based Multi-Agent Collaboration with Faulty Agents](https://proceedings.mlr.press/v267/huang25ay.html) | ICML 2025 | **retained** | ✓ |
+| 14 | [RAGAs: Automated Evaluation of Retrieval Augmented Generation](https://aclanthology.org/2024.eacl-demo.16/) | Proc. 18th Conf. Eur. Chapter Assoc. Comput. Linguistics: Syst. Demonstrations 2024 | not retained --- eval framework | ✓ |
+| 15 | [ToolEmu: Identifying the Risks of LM Agents with an LM-Emulated Sandbox](https://arxiv.org/abs/2309.15817) | Proc. Int. Conf. Learn. Represent. 2024 | not retained --- benchmark | ✓ |
+| 16 | [ToolSandbox: A Stateful, Conversational, Interactive Evaluation Benchmark for LLM Tool Use Capabilities](https://aclanthology.org/2025.findings-naacl.65/) | Findings Assoc. Comput. Linguistics: NAACL 2025 | not retained --- benchmark | ✓ |
+| 17 | [WebArena: A Realistic Web Environment for Building Autonomous Agents](https://arxiv.org/abs/2307.13854) | arXiv preprint 2024 | not retained --- benchmark | ✓ |
+| 18 | [When Allies Turn Foes: Exploring Group Characteristics of LLM-Based Multi-Agent Collaborative Systems Under Adversarial Attacks](https://aclanthology.org/2025.findings-emnlp.333/) | preprint 2025 | **retained** | ✓ |
+| 19 | [Which Agent Causes Task Failures and When? On Automated Failure Attribution of LLM Multi-Agent Systems](https://arxiv.org/pdf/2505.00212) | ICML 2025 | **retained** | ✓ |
+| 20 | [Tau-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains](https://arxiv.org/abs/2406.12045) | arXiv preprint 2024 | not retained --- benchmark | ✓ |
 
+### `07_frontier_2025_2026` --- Frontier 2025–2026
 
+| # | Paper | Venue / year | Status | Cited |
+|---:|---|---|---|:-:|
+| 1 | [SAKI-RAG: Mitigating Context Fragmentation in Long-Document RAG via Sentence-level Attention Knowledge Integration](https://aclanthology.org/2025.emnlp-main.63/) | Proc. Conf. Empirical Methods Natural Lang. Process. 2025 | not retained --- single-agent RAG | ✓ |
 
+### `08_demo_selection_icl_sota` --- Demonstration selection
 
+| # | Paper | Venue / year | Status | Cited |
+|---:|---|---|---|:-:|
+| 1 | [Problem-Solving Logic Guided Curriculum In-Context Learning for LLMs Complex Reasoning](https://arxiv.org/abs/2502.15401) | Proc. 63rd Annu. Meeting Assoc. Comput. Linguistics 2025 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
+| 2 | In-Context Learning with Iterative Demonstration Selection | Findings Assoc. Comput. Linguistics: EMNLP 2024 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
+| 3 | [Teach Better or Show Smarter? On Instructions and Exemplars in Automatic Prompt Optimization](https://arxiv.org/abs/2406.15708) | Proc. Adv. Neural Inf. Process. Syst. 2024 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) |  |
+| 4 | Effective Demonstration Annotation for In-Context Learning via Language Model-Based Determinantal Point Process | Proc. Conf. Empirical Methods Natural Lang. Process. 2024 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
+| 5 | Reward Mixology: Crafting Hybrid Signals for Reinforcement Learning Driven In-Context Learning | Findings Assoc. Comput. Linguistics: EMNLP 2025 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
+| 6 | Correlation-Aware Example Selection for In-Context Learning with Nonsymmetric Determinantal Point Processes | Proc. Conf. Empirical Methods Natural Lang. Process. 2025 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
+| 7 | ConsensAgent: Towards Efficient and Effective Consensus in Multi-Agent LLM Interactions through Sycophancy Mitigation | ACL 2025 | **retained** |  |
+| 8 | [In-Context Learning Demonstration Selection via Influence Analysis](https://arxiv.org/abs/2402.11750) | arXiv preprint 2024 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
+| 9 | PromptWizard: Optimizing Prompts via Task-Aware, Feedback-Driven Self-Evolution | Findings Assoc. Comput. Linguistics: ACL 2025 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) |  |
+| 10 | [Context Learning for Multi-Agent Discussion](https://arxiv.org/abs/2602.02350) | ICLR 2026 | **retained** |  |
+| 11 | [Demonstration Selection for In-Context Learning via Reinforcement Learning](https://arxiv.org/abs/2412.03966) | Proc. 42nd Int. Conf. Mach. Learn. 2025 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
+| 12 | [DETAIL: Task Demonstration Attribution for Interpretable In-context Learning](https://arxiv.org/abs/2405.14899) | Proc. Adv. Neural Inf. Process. Syst. 2024 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
+| 13 | [Curriculum Demonstration Selection for In-Context Learning](https://arxiv.org/abs/2411.18126) | Proc. 40th ACM/SIGAPP Symp. Appl. Comput. (SAC) 2025 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
+| 14 | [DemoRank: Selecting Effective Demonstrations for Large Language Models in Ranking Task](https://arxiv.org/abs/2406.16332) | arXiv preprint 2024 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
+| 15 | [Self-Generated In-Context Examples Improve LLM Agents for Sequential Decision-Making Tasks](https://arxiv.org/abs/2505.00234) | arXiv preprint 2025 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
+| 16 | [Easier to Judge than to Find: Predicting In-Context Learning Success for Demonstration Selection](https://arxiv.org/abs/2605.18512) | Proc. 43rd Int. Conf. Mach. Learn. 2026 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
+| 17 | [Rethinking Label Consistency of In-Context Learning: An Implicit Transductive Label Propagation Perspective](https://arxiv.org/abs/2512.12175) | Proc. AAAI Conf. Artif. Intell. 2026 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
+| 18 | IclForge: Enhancing In-Context Learning with Evolutionary Algorithms under Budgeted Annotation | Proc. 34th ACM Int. Conf. Inf. Knowl. Manage. (CIKM) 2025 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
 
-## Master table
+### `09_coverage_budget_conformal` --- Coverage and budget methods
 
-| Category                        | Paper                                                        | Venue/Year                    | Problem                                  | Method                                                       | Context Contribution                                         | Relevance                                                    | URL                                                          |
-| ------------------------------- | ------------------------------------------------------------ | ----------------------------- | ---------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 综述与总览                      | Large Language Model based Multi-Agents: A Survey of Progress and Challenges | Survey / 2024                 | LLM-MAS overview                         | Systematically surveys LLM-based multi-agent systems, progress and challenges. | Provides taxonomy across agent roles, communication, cooperation, planning, and evaluation. | Backbone survey for defining MAS scope and challenges.       | https://arxiv.org/abs/2402.01680                             |
-| 综述与总览                      | Large Language Model Agent: A Survey on Methodology, Applications and Challenges | Survey / 2023-2025            | LLM agent methodology                    | Surveys agent architecture, planning, memory, tool use, applications, and challenges. | Connects context, memory and tool feedback to agent operation. | Background chapter for agent components beyond multi-agent systems. | https://arxiv.org/abs/2309.07864                             |
-| 综述与总览                      | A Survey of Self-Evolving Agents: On Path to Artificial Super Intelligence | arXiv / 2025                  | Self-evolving agents                     | Reviews agents that adapt through data, interaction, feedback and experience. | Formalizes what/when/how to evolve, including memory, tools, architecture and multi-agent systems. | Key 2025 survey for the self-evolution axis.                 | https://arxiv.org/abs/2507.21046                             |
-| 综述与总览                      | A Comprehensive Survey of Self-Evolving AI Agents: A New Paradigm Bridging Foundation Models and Lifelong Agentic Systems | arXiv / 2025                  | Self-evolving agentic systems            | Unifies feedback loops underlying self-evolving agents.      | Frames evolution as iterative feedback, refinement and lifelong adaptation. | Useful for defining self-evolution beyond prompt tweaking.   | https://huggingface.co/papers/2508.07407                     |
-| 综述与总览                      | A Survey of Context Engineering for Large Language Models    | arXiv / 2025                  | Context engineering                      | Surveys context retrieval, generation, processing and management. | Defines context as an optimizable information payload rather than a static prompt. | Core survey for the context-engineering framing.             | https://arxiv.org/abs/2507.13334                             |
-| 综述与总览                      | Creativity in LLM-based Multi-Agent Systems: A Survey        | EMNLP / 2025                  | Creativity in MAS                        | Surveys creativity generation, evaluation, personas and workflow coordination in MAS. | Highlights how creative contexts and agent personas are designed and evaluated. | Good 2025 frontier example of domain-specific MAS survey.    | https://aclanthology.org/2025.emnlp-main.1403/               |
-| 多智能体框架与协作机制          | CAMEL: Communicative Agents for Mind Exploration of Large Language Model Society | NeurIPS workshop/arXiv / 2023 | Role-playing communication               | Introduces role-playing communicative agents for task solving and agent society exploration. | Shows how role prompts and conversation history become shared task context. | Foundational role-based multi-agent framework.               | https://arxiv.org/abs/2303.17760                             |
-| 多智能体框架与协作机制          | AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversations | arXiv / 2023                  | Multi-agent application framework        | Provides a programmable framework for multi-agent conversation and orchestration. | Treats messages, tool outputs, human feedback and histories as operational context. | Canonical engineering framework for MAS applications.        | https://arxiv.org/abs/2308.08155                             |
-| 多智能体框架与协作机制          | MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework | ICLR / 2024                   | SOP-driven collaboration                 | Encodes software-company SOPs into multi-agent roles and workflows. | Turns process documents and role responsibilities into structured context. | Important for industry-oriented process-driven agents.       | https://arxiv.org/abs/2308.00352                             |
-| 多智能体框架与协作机制          | AgentVerse: Facilitating Multi-Agent Collaboration and Exploring Emergent Behaviors | ICLR / 2024                   | Collaboration and emergence              | Framework for multi-agent collaboration, simulation and emergent behavior study. | Uses role, memory, environment and inter-agent messages as context channels. | Useful for taxonomy of agent societies and coordination.     | https://arxiv.org/abs/2308.10848                             |
-| 多智能体框架与协作机制          | ChatDev: Communicative Agents for Software Development       | ACL / 2024                    | Software development via agents          | Models software development as multi-agent chat among CEO, CTO, programmers, testers, etc. | Transforms software requirements, design reviews and tests into evolving collaborative context. | Key industry application and MAS framework case.             | https://aclanthology.org/2024.acl-long.810/                  |
-| 多智能体框架与协作机制          | Mixture-of-Agents Enhances Large Language Model Capabilities | arXiv / 2024                  | Agent/model aggregation                  | Aggregates outputs from multiple LLM agents/models to improve answer quality. | Shows context aggregation and response refinement through multiple agents. | Represents ensemble/aggregation route distinct from workflow MAS. | https://arxiv.org/abs/2406.04692                             |
-| 多智能体框架与协作机制          | Scaling Large Language Model-based Multi-Agent Collaboration | ICLR / 2025                   | Scaling MAS collaboration                | Studies effects of number of agents, communication structures and collaboration scaling. | Analyzes how topology and history management affect context flow. | Important for system-level limits and scaling laws.          | https://openreview.net/                                      |
-| 多智能体框架与协作机制          | Beyond Frameworks: Unpacking Collaboration Strategies in Multi-Agent LLM Systems | ACL / 2025                    | Collaboration strategies                 | Studies governance, participation control, interaction dynamics and dialogue history management. | Directly analyzes dialogue history management as a context variable. | Strong 2025 paper for mechanism-level taxonomy.              | https://aclanthology.org/2025.acl-long.1037/                 |
-| 多智能体框架与协作机制          | MegaAgent: A Large-Scale Autonomous LLM-based Multi-Agent System | Findings ACL / 2025           | Large-scale autonomous MAS               | Generates agents based on task complexity with dynamic decomposition and monitoring. | Uses dynamic decomposition, communication and monitoring contexts to coordinate many agents. | New 2025 framework for scalable autonomous MAS.              | https://aclanthology.org/2025.findings-acl.259/              |
-| 自进化/自改进机制               | 360°REA: Towards A Reusable Experience Accumulation with 360° Assessment for Multi-Agent System | Findings ACL / 2024           | Reusable experience accumulation         | Builds assessment and experience accumulation mechanisms for MAS. | Turns assessment results into reusable experience context.   | Highly aligned with self-evolving context in MAS.            | https://aclanthology.org/2024.findings-acl.***/              |
-| 自进化/自改进机制               | SiriuS: Self-improving Multi-agent Systems via Bootstrapped Reasoning | OpenReview / 2025             | Self-improving MAS                       | Constructs an experience library of high-quality reasoning trajectories for optimization. | Experience library becomes persistent context for later agents. | Core paper for experience-driven self-evolution.             | https://openreview.net/forum?id=sLBSJr3hH5                   |
-| 自进化/自改进机制               | Multi-Agent Evolve: LLM Self-Improve through Multi-Agent Co-evolution | OpenReview / 2025             | Multi-agent co-evolution                 | Uses Proposer-Solver-Judge roles and reinforcement learning for self-improvement. | Judge feedback and generated tasks form evolving training/context signals. | Core co-evolution paper for the topic.                       | https://openreview.net/forum?id=sknMpr8NWU                   |
-| 自进化/自改进机制               | CoMAS: Co-Evolving Multi-Agent Systems via Interaction Rewards | arXiv/OpenReview / 2025       | Interaction-reward evolution             | Learns from intrinsic rewards derived from agent interactions rather than external labels. | Uses inter-agent interaction traces as evolution signals.    | Useful for autonomous evolution without human supervision.   | https://openreview.net/                                      |
-| 自进化/自改进机制               | EvolveR: Self-Evolving LLM Agents through an Experience Lifecycle | arXiv / 2025                  | Experience lifecycle                     | Defines lifecycle for collecting, validating, storing and reusing experiences. | Explicitly models experience as evolving memory/context.     | Good for memory-to-evolution mechanism section.              | https://arxiv.org/                                           |
-| 自进化/自改进机制               | MorphAgent: Empowering Agents through Self-Evolving Profiles | arXiv / 2025                  | Self-evolving profiles                   | Allows agent profiles/personas to evolve with task feedback. | Agent profile is treated as mutable context.                 | Useful contrast with static role prompts in CAMEL/MetaGPT.   | https://arxiv.org/                                           |
-| 自进化/自改进机制               | Gödel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement | ACL / 2025                    | Recursive self-improvement               | Explores self-referential agent improvement loops.           | Agent instructions and self-model are subject to recursive revision. | Important frontier paper for self-improvement discussion.    | https://aclanthology.org/                                    |
-| 自进化/自改进机制               | Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models | ICLR / 2026                   | Evolving contexts                        | Studies context adaptation through instructions, strategies and evidence rather than weight updates. | Directly treats context as the evolving object for self-improving LLMs. | Probably the closest 2026 paper to your exact title.         | https://openreview.net/forum?id=eC4ygDs02R                   |
-| 自进化/自改进机制               | Multiagent Finetuning: Self Improvement with Diverse Reasoning Chains | OpenReview / 2025             | Self-improvement via debate data         | Fine-tunes generator/critic agents using diverse reasoning chains from multi-agent debate. | Debate trajectories become training/contextual supervision.  | Supports bridge between MAS and model-level self-improvement. | https://openreview.net/forum?id=JtGPIZpOrz                   |
-| 上下文工程、ICL、记忆与长上下文 | Language Models are Few-Shot Learners                        | NeurIPS / 2020                | Few-shot prompting and ICL               | Introduces GPT-3 and demonstrates in-context few-shot learning. | Establishes examples/instructions in prompt as adaptation context. | Historical foundation for context technologies.              | https://proceedings.neurips.cc/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html |
-| 上下文工程、ICL、记忆与长上下文 | Rethinking the Role of Demonstrations: What Makes In-Context Learning Work? | EMNLP / 2022                  | ICL mechanism                            | Analyzes which aspects of demonstrations matter for ICL.     | Shows context labels/examples affect model behavior in non-trivial ways. | Theoretical bridge from ICL to engineered context.           | https://aclanthology.org/2022.emnlp-main.759/                |
-| 上下文工程、ICL、记忆与长上下文 | A Survey on In-context Learning                              | EMNLP / 2024                  | ICL survey                               | Systematically surveys ICL definitions, methods and evaluations. | Organizes demonstration selection, ordering and formatting as context design. | Main background survey for ICL section.                      | https://aclanthology.org/2024.emnlp-main.64/                 |
-| 上下文工程、ICL、记忆与长上下文 | The Mystery of In-Context Learning: A Comprehensive Survey on Interpretation and Analysis | EMNLP / 2024                  | ICL interpretation                       | Surveys mechanisms and interpretation of ICL.                | Helps explain why context can induce task behavior without weight updates. | Useful for theory subsection.                                | https://aclanthology.org/2024.emnlp-main.*/                  |
-| 上下文工程、ICL、记忆与长上下文 | PromptAgent: Strategic Planning with Language Models Enables Expert-level Prompt Optimization | ICLR / 2024                   | Prompt optimization                      | Uses strategic planning to optimize prompts.                 | Turns prompt/context optimization into search/planning.      | Bridge from manual prompt engineering to self-evolving context. | https://openreview.net/forum?id=22pyNMuIoa                   |
-| 上下文工程、ICL、记忆与长上下文 | EvoPrompt: Connecting LLMs with Evolutionary Algorithms Yields Powerful Prompt Optimizers | ICLR / 2024                   | Evolutionary prompt optimization         | Combines LLMs and evolutionary algorithms to optimize prompts. | Directly connects evolutionary search with context/prompt improvement. | Must-read for evolution + context optimization.              | https://openreview.net/forum?id=zg3PuXyH2X                   |
-| 上下文工程、ICL、记忆与长上下文 | Tree of Agents: Improving Long-Context Capabilities of LLMs through Multi-Perspective Reasoning | arXiv / 2024-2025             | Long-context reasoning                   | Uses multiple agents/perspectives to process long contexts.  | Splits and integrates long context through agent tree reasoning. | Cross-over paper connecting MAS and long-context.            | https://arxiv.org/                                           |
-| 上下文工程、ICL、记忆与长上下文 | LongLeader: A Comprehensive Leaderboard for Large Language Models in Long Context | arXiv / 2024-2025             | Long-context benchmark                   | Benchmarks LLMs on long-context capabilities.                | Provides evaluation angle for context length, robustness and retrieval. | Useful for benchmark section.                                | https://arxiv.org/                                           |
-| 上下文工程、ICL、记忆与长上下文 | MemBench: Towards More Comprehensive Evaluation on the Memory of LLM Agents | arXiv / 2024-2025             | Agent memory evaluation                  | Evaluates memory of LLM agents more comprehensively.         | Frames memory as persistent context subject to retention and retrieval errors. | Useful for memory/evaluation section.                        | https://arxiv.org/                                           |
-| 行业应用                        | TriageAgent: Towards Better Multi-Agents Collaborations for Large Language Model-Based Clinical Triage | Findings EMNLP / 2024         | Clinical triage                          | Applies multi-agent collaboration to clinical triage tasks.  | Role-specific medical context and discussion improve decision support. | Healthcare case for industry applications.                   | https://aclanthology.org/2024.findings-emnlp.***/            |
-| 行业应用                        | AI Hospital: Benchmarking Large Language Models in a Multi-agent Medical Scenario | arXiv / 2024-2025             | Medical MAS benchmark                    | Simulates hospital-like multi-agent medical scenarios.       | Medical workflow and patient histories form structured context. | Good domain-specific benchmark example.                      | https://arxiv.org/                                           |
-| 行业应用                        | MultiAgentESC: A LLM-based Multi-Agent Collaboration Framework for Emotional Support Conversation | EMNLP / 2025                  | Emotional support conversation           | Applies multi-agent collaboration to mental-health support conversations. | Uses roles and interaction history to structure supportive response generation. | 2025 healthcare/mental-health application.                   | https://aclanthology.org/2025.emnlp-main.232/                |
-| 行业应用                        | Large Language Model Agents in Finance: A Survey Bridging Research, Practice, and Real-World Deployment | Findings EMNLP / 2025         | Finance agents survey                    | Surveys finance LLM agents from research and deployment perspectives. | Highlights institutional context, compliance, transparency and domain constraints. | Best 2025 finance survey for industry chapter.               | https://aclanthology.org/2025.findings-emnlp.972/            |
-| 行业应用                        | QuantAgents: Towards Multi-agent Financial System via Simulated Trading | arXiv / 2024-2025             | Financial trading MAS                    | Builds multi-agent financial system for simulated trading.   | Market data, roles and trading history become evolving context. | Concrete finance application case.                           | https://arxiv.org/                                           |
-| 行业应用                        | From Earnings Calls to Investment Reports: Evaluating Role-based Multi-Agent LLM Systems | arXiv / 2024-2025             | Investment report generation             | Evaluates role-based agents for turning earnings calls into investment reports. | Domain documents and role assignments provide industry-specific context. | Good for finance/report generation example.                  | https://arxiv.org/                                           |
-| 行业应用                        | Multi-Agent Autonomous Driving Systems with Large Language Models: A Survey of Recent Advances, Resources, and Future Directions | Findings EMNLP / 2025         | Autonomous driving MAS survey            | Surveys LLM-based multi-agent autonomous driving systems.    | Links perception, communication, planning and human interaction contexts. | Strong 2025 industry survey for autonomous driving.          | https://aclanthology.org/2025.findings-emnlp.683/            |
-| 行业应用                        | DriveAgent: Multi-Agent Structured Reasoning with LLM and Multimodal Sensor Fusion for Autonomous Driving | arXiv / 2024-2025             | Autonomous driving reasoning             | Uses multi-agent structured reasoning plus multimodal sensor fusion. | Sensor context and agent reasoning contexts are fused for driving decisions. | Concrete autonomous-driving method paper.                    | https://arxiv.org/                                           |
-| 行业应用                        | DrugAgent: Automating AI-aided Drug Discovery Programming through LLM Multi-Agent Collaboration | arXiv / 2024-2025             | Drug discovery programming               | Uses LLM multi-agent collaboration for AI-aided drug discovery programming. | Scientific code, experiment feedback and domain knowledge form task context. | Scientific discovery / pharma industry example.              | https://arxiv.org/                                           |
-| 行业应用                        | Autonomous Agents for Scientific Discovery: Orchestrating Scientists and Robots through LLM-based Agents | arXiv / 2024-2025             | Scientific discovery agents              | Orchestrates scientist and robot agents for autonomous discovery workflows. | Lab protocols, observations and robot feedback become evolving context. | High-value future industry/science direction.                | https://arxiv.org/                                           |
-| 评测、基准与安全                | MAgIC: Investigation of LLM Powered Multi-Agent in Cognition, Adaptability, Rationality and Collaboration | EMNLP / 2024                  | MAS evaluation                           | Evaluates multi-agent systems across cognition, adaptability, rationality and collaboration. | Provides dimensions for context use and collaboration quality. | Key benchmark for evaluation chapter.                        | https://aclanthology.org/2024.emnlp-main.***/                |
-| 评测、基准与安全                | MultiAgentBench: Evaluating the Collaboration and Competition of LLM Agents | ACL / 2025                    | MAS benchmark                            | Benchmarks collaboration and competition across interactive scenarios. | Evaluates coordination protocols and dialogue/context strategies. | Very important 2025 benchmark for MAS evaluation.            | https://aclanthology.org/2025.acl-long.421/                  |
-| 评测、基准与安全                | Benchmark Self-Evolving: A Multi-Agent Framework for Dynamic LLM Evaluation | arXiv / 2025                  | Dynamic evaluation                       | Uses multi-agent framework to evolve benchmarks dynamically. | Treats evaluation context and test cases as evolving artifacts. | Useful for self-evolving evaluation subsection.              | https://arxiv.org/                                           |
-| 评测、基准与安全                | Agents Under Siege: Breaking Pragmatic Multi-Agent LLM Systems | ACL / 2025                    | MAS security                             | Studies attacks that propagate through inter-agent communication. | Shows shared context and messages can become attack vectors. | Important safety warning for industry deployment.            | https://aclanthology.org/2025.acl-long.476/                  |
-| 评测、基准与安全                | When Allies Turn Foes: Exploring Group Characteristics of LLM-Based Multi-Agent Collaborative Systems Under Adversarial Attacks | Findings EMNLP / 2025         | Adversarial MAS                          | Studies group characteristics of MAS under attacks.          | Analyzes how malicious context spreads in collaboration.     | 2025 safety paper for open challenges.                       | https://2025.emnlp.org/program/find_papers/                  |
-| 评测、基准与安全                | AgentDropout: Dynamic Agent Elimination for Token-Efficient and High-Performance LLM-Based Multi-Agent Collaboration | ACL / 2025                    | Token-efficient MAS                      | Eliminates less useful agents dynamically to reduce cost.    | Optimizes context budget and communication load.             | Useful for cost/context-efficiency discussion.               | https://aclanthology.org/                                    |
-| 评测、基准与安全                | On the Resilience of LLM-Based Multi-Agent Collaboration with Faulty Agents | ICML / 2025                   | Fault-tolerant MAS                       | Studies resilience of multi-agent collaboration when agents are faulty. | Faulty messages and histories affect group context quality.  | Important for reliability in industry settings.              | https://openreview.net/                                      |
-| 评测、基准与安全                | Which Agent Causes Task Failures and When? On Automated Failure Attribution of LLM Multi-Agent Systems | ICML / 2025                   | Failure attribution                      | Attributes failures to specific agents or moments in MAS workflows. | Analyzes dialogue traces/context histories for debugging.    | Useful for observability and auditability in deployment.     | https://openreview.net/                                      |
-| 2025/2026 前沿补充              | DatawiseAgent: A Notebook-Centric LLM Agent Framework for Adaptive and Robust Data Science Automation | EMNLP / 2025                  | Data science automation                  | Builds adaptive notebook-centric agents for data science tasks. | Notebook state, code, outputs and feedback become executable context. | Industry data-analysis application and agent context case.   | https://2025.emnlp.org/program/main_papers/                  |
-| 2025/2026 前沿补充              | GenPilot: A Multi-Agent System for Test-Time Prompt Optimization in Image Generation | Findings EMNLP / 2025         | Prompt optimization for image generation | Uses multi-agent system to optimize prompts at test time.    | Directly evolves prompt/context during generation.           | Good 2025 cross-modal context-evolution paper.               | https://2025.emnlp.org/program/find_papers/                  |
-| 2025/2026 前沿补充              | IPIGuard: A Novel Tool Dependency Graph-Based Defense Against Indirect Prompt Injection in LLM Agents | EMNLP / 2025                  | Prompt-injection defense                 | Uses tool dependency graph to defend LLM agents from indirect prompt injection. | Models tool outputs and dependencies as security-sensitive context. | Important for safe industry deployment of context-heavy agents. | https://2025.emnlp.org/program/main_papers/                  |
-| 2025/2026 前沿补充              | MCIP: Protecting MCP Safety via Model Contextual Integrity Protocol | EMNLP / 2025                  | MCP/context safety                       | Proposes contextual integrity protocol for MCP-style agent systems. | Formalizes context boundaries and integrity constraints.     | Relevant to secure context engineering in agent systems.     | https://2025.emnlp.org/program/main_papers/                  |
-| 2025/2026 前沿补充              | SAKI-RAG: Mitigating Context Fragmentation in Long-Document RAG via Sentence-level Attention Knowledge Integration | EMNLP / 2025                  | Long-document RAG                        | Mitigates context fragmentation in long-document RAG.        | Improves retrieval/integration context for long documents.   | Useful for context-processing subsection.                    | https://2025.emnlp.org/program/main_papers/                  |
+| # | Paper | Venue / year | Status | Cited |
+|---:|---|---|---|:-:|
+| 1 | [From Haystack to Needle: Label Space Reduction for Zero-shot Classification](https://arxiv.org/abs/2502.08436) | arXiv 2025 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) |  |
+| 2 | [Efficient Text Classification with Conformal In-Context Learning](https://arxiv.org/abs/2512.05732) | arXiv preprint 2025 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) |  |
+| 3 | [Conformal Intent Classification and Clarification for Fast and Accurate Intent Recognition](https://arxiv.org/abs/2403.18973) | Findings of NAACL 2024 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) |  |
+| 4 | Many-Shot In-Context Learning | Proc. Adv. Neural Inf. Process. Syst. 2024 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
+| 5 | [Towards Compute-Optimal Many-Shot In-Context Learning](https://arxiv.org/abs/2507.16217) | COLM 2025 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) |  |
+| 6 | [UCS: Estimating Unseen Coverage for Improved In-Context Learning](https://arxiv.org/abs/2604.12015) | arXiv 2026 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) |  |
+| 7 | [Learn to Select: Exploring Label Distribution Divergence for In-Context Demonstration Selection in Text Classification](https://arxiv.org/abs/2511.10675) | arXiv 2025 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) |  |
+| 8 | [Tail-Aware Adaptive-k: Query-Adaptive Context Selection for Retrieval-Augmented Generation](https://arxiv.org/abs/2606.11907) | arXiv 2026 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) |  |
+| 9 | Coverage-based Example Selection for In-Context Learning | Findings Assoc. Comput. Linguistics: EMNLP 2023 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) | ✓ |
+| 10 | [Know Your Limits: A Survey of Abstention in Large Language Models](https://arxiv.org/abs/2407.18418) | TACL 2025 | not retained --- survey |  |
+| 11 | [ICXML: An In-Context Learning Framework for Zero-Shot Extreme Multi-Label Classification](https://arxiv.org/abs/2311.09649) | arXiv 2023 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) |  |
+| 12 | [Conformal Prediction with Large Language Models for Multi-Choice Question Answering](https://arxiv.org/abs/2305.18404) | arXiv 2023 | not retained --- single-agent ICL (folders 04/08/09 except CONSENSAGENT, M2CL) |  |
+
+## ⚠️ Filenames that do not match their contents
+
+Recorded rather than silently corrected, because the filename is what you see when you click through `Papers/`. The titles in the tables above are the ones on page 1 of the stored PDF.
+
+- `04_context_engineering_icl_memory/Selective Context_ Efficient Inference with Content-Aware Prompt Compression.pdf` --- stored PDF is Li et al., "Compressing Context to Enhance Inference Efficiency of Large Language Models" (EMNLP 2023), a different paper from the one the filename names
+- `06_evaluation_benchmarks_safety/MLflow_ A Platform for the Machine Learning Lifecycle.pdf` --- stored PDF is Zaharia et al., "Accelerating the Machine Learning Lifecycle with MLflow" (IEEE Data Eng. Bull. 2018)
+
+## Provenance of this index
+
+Generated by `scripts/gen_repo_index.py` in the paper's source tree, from `references.bib` (titles, venues and links, as verified in the paper's reference-authenticity audit), `scripts/e1e2/corpus.py` (the retained set), `e1_audit.csv` and `excluded.csv`. Where a paper has no bibliography entry, because the survey cites it nowhere, its metadata was transcribed from page 1 of the stored PDF.
+
+**No field here comes from a filename.** An earlier version of this index did take metadata from filenames, and two of its rows described a different paper from the one stored under them.
+
+## Limits
+
+1. **A curated library, not a database sweep.** Papers entered it through venue browsing, citation chasing, and topical search during drafting. No query string reproduces it. Read every proportion as a census of this set.
+2. **One coder.** The coding manual specifies two independent coders and a reliability statistic; one coder executed it, so no inter-rater agreement is claimed.
+3. **Screen recall is below 100%.** Five false negatives were found and corrected by hand. Any undetected case of the same kind moves a computability rate up, never down, so the reported rates are lower bounds.
