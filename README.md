@@ -178,7 +178,7 @@ These are the systems every quantitative claim in the survey's empirical section
 | 11 | [MultiAgentESC: A LLM-based Multi-Agent Collaboration Framework for Emotional Support Conversation](https://aclanthology.org/2025.emnlp-main.232/) | EMNLP 2025 | **retained** | ✓ |
 | 12 | [QuantAgents: Towards Multi-agent Financial System via Simulated Trading](https://aclanthology.org/2025.findings-emnlp.945/) | preprint 2025 | **retained** | ✓ |
 | 13 | [SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering](https://openreview.net/forum?id=mXpq6ut8J3) | Proc. Adv. Neural Inf. Process. Syst. 2024 | not retained --- single agent | ✓ |
-| 14 | [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770) | arXiv preprint 2024 | not retained --- benchmark | ✓ |
+| 14 | [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770) | Proc. Int. Conf. Learn. Represent. 2024 | not retained --- benchmark | ✓ |
 | 15 | [TriageAgent: Towards Better Multi-Agents Collaborations for Large Language Model-Based Clinical Triage](https://aclanthology.org/2024.findings-emnlp.329/) | Findings-EMNLP 2024 | **retained** | ✓ |
 
 ### `06_evaluation_benchmarks_safety` --- Evaluation, benchmarks, and safety
@@ -201,7 +201,7 @@ These are the systems every quantitative claim in the survey's empirical section
 | 14 | [RAGAs: Automated Evaluation of Retrieval Augmented Generation](https://aclanthology.org/2024.eacl-demo.16/) | Proc. 18th Conf. Eur. Chapter Assoc. Comput. Linguistics: Syst. Demonstrations 2024 | not retained --- eval framework | ✓ |
 | 15 | [ToolEmu: Identifying the Risks of LM Agents with an LM-Emulated Sandbox](https://arxiv.org/abs/2309.15817) | Proc. Int. Conf. Learn. Represent. 2024 | not retained --- benchmark | ✓ |
 | 16 | [ToolSandbox: A Stateful, Conversational, Interactive Evaluation Benchmark for LLM Tool Use Capabilities](https://aclanthology.org/2025.findings-naacl.65/) | Findings Assoc. Comput. Linguistics: NAACL 2025 | not retained --- benchmark | ✓ |
-| 17 | [WebArena: A Realistic Web Environment for Building Autonomous Agents](https://arxiv.org/abs/2307.13854) | arXiv preprint 2024 | not retained --- benchmark | ✓ |
+| 17 | [WebArena: A Realistic Web Environment for Building Autonomous Agents](https://arxiv.org/abs/2307.13854) | Proc. Int. Conf. Learn. Represent. 2024 | not retained --- benchmark | ✓ |
 | 18 | [When Allies Turn Foes: Exploring Group Characteristics of LLM-Based Multi-Agent Collaborative Systems Under Adversarial Attacks](https://aclanthology.org/2025.findings-emnlp.333/) | preprint 2025 | **retained** | ✓ |
 | 19 | [Which Agent Causes Task Failures and When? On Automated Failure Attribution of LLM Multi-Agent Systems](https://arxiv.org/pdf/2505.00212) | ICML 2025 | **retained** | ✓ |
 | 20 | [Tau-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains](https://arxiv.org/abs/2406.12045) | arXiv preprint 2024 | not retained --- benchmark | ✓ |
@@ -278,9 +278,53 @@ Every filename in this repository now matches the title on page 1 of the file st
 - `06_evaluation_benchmarks_safety/Model Context Protocol Threat Modeling and Analyzing Vulnerabilities to Prompt Injection with Tool Poisoning.pdf`
   - was "Model Context Protocol Threat Modeling: Tool Poisoning and Client Security", a paraphrase rather than the paper's title
 
-## `Papers/_not_in_pool/`
+## `Papers/_not_in_pool/` — cited, but never screened
 
-One file sits outside the nine folders. It was published here as *Large Language Model Agent: A Survey on Methodology, Applications and Challenges*, but the PDF stored under that name is Xi et al., *The Rise and Potential of Large Language Model Based Agents: A Survey*. The library caught the mismatch and moved the file out of the screened folders, so it is not one of the 125 pool documents and no proportion in the paper counts it. It is kept here, correctly named, because the survey does cite Xi et al.
+The survey cites 133 works. Some of them never entered the library, so they were never screened and are not part of any count the paper reports. They are kept here — 23 with the PDF, 8 by DOI only — so that every work the survey cites can be reached from this repository.
+
+**These are not pool documents.** The 125 documents in the nine folders above are the screened pool; every proportion in the paper is a census over exactly those. Nothing in this section is counted in the 38 retained systems, in the exclusion ledger, or in any denominator. The topic subfolders here mirror the nine-folder scheme for readability, nothing more.
+
+Each PDF was verified on arrival by reading page 1 and comparing it with the title in `references.bib`; none was filed on the strength of its URL. Where the copy came from an open preprint server it may differ from the camera-ready the bibliography entry describes, so the source of every copy is recorded.
+
+The works with no PDF are IEEE, ACM or Springer camera-readys. Re-hosting a publisher's PDF from a public repository would infringe, so they are listed with a DOI and nothing else. That is a deliberate omission, not a gap.
+
+Full table: [`index/cited_not_in_pool.csv`](index/cited_not_in_pool.csv).
+
+| Work | Venue | Topic | PDF here | Copy from |
+| --- | --- | --- | --- | --- |
+| [Cognitive edge computing: A comprehensive survey on optimizing large models and AI agents for pervasive deployment](https://arxiv.org/abs/2501.03265) | arXiv preprint 2025 | 01_overview_surveys | yes | arXiv |
+| [Knowledge Conflicts for LLMs: A Survey](https://aclanthology.org/2024.emnlp-main.486/) | Proc. Conf. Empirical Methods Natural Lang. Process. 2024 | 01_overview_surveys | yes | ACL Anthology |
+| [The Rise and Potential of Large Language Model Based Agents: A Survey](https://arxiv.org/abs/2309.07864) | arXiv preprint 2023 | 01_overview_surveys | yes | the library's _misfiled/ folder |
+| [ChatEval: Towards Better LLM-based Evaluators through Multi-Agent Debate](https://openreview.net/forum?id=FQepisCUWu) | Proc. Int. Conf. Learn. Represent. 2024 | 02_multi_agent_frameworks | yes | arXiv |
+| [Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://proceedings.mlr.press/v235/du24e.html) | Proc. 41st Int. Conf. Mach. Learn. 2024 | 02_multi_agent_frameworks | yes | arXiv |
+| [Improving Multi-Agent Debate with Sparse Communication Topology](https://doi.org/10.18653/v1/2024.findings-emnlp.427) | Findings Assoc. Comput. Linguistics: EMNLP 2024 | 02_multi_agent_frameworks | yes | ACL Anthology |
+| [Automatic Prompt Optimization with ``Gradient Descent'' and Beam Search](https://doi.org/10.18653/v1/2023.emnlp-main.494) | Proc. Conf. Empirical Methods Natural Lang. Process. 2023 | 03_self_evolution | yes | ACL Anthology |
+| [DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines](https://arxiv.org/abs/2310.03714) | Proc. Int. Conf. Learn. Represent. 2024 | 03_self_evolution | yes | arXiv |
+| [Large Language Models Are Human-Level Prompt Engineers](https://openreview.net/forum?id=92gvk82DE-) | Proc. Int. Conf. Learn. Represent. 2023 | 03_self_evolution | yes | arXiv |
+| [PromptBreeder: Self-Referential Self-Improvement via Prompt Evolution](https://arxiv.org/abs/2309.16797) | Proc. 41st Int. Conf. Mach. Learn. 2024 | 03_self_evolution | yes | arXiv |
+| [Adaptive-RAG: Learning to Adapt Retrieval-Augmented Large Language Models through Question Complexity](https://aclanthology.org/2024.naacl-long.389/) | Proc. Conf. North Amer. Chapter Assoc. Comput. Linguistics: Human Lang. Technol. 2024 | 04_context_engineering_icl_memory | yes | ACL Anthology |
+| [Evaluating Very Long-Term Conversational Memory of LLM Agents](https://doi.org/10.18653/v1/2024.acl-long.747) | Proc. 62nd Annu. Meeting Assoc. Comput. Linguistics 2024 | 04_context_engineering_icl_memory | yes | ACL Anthology |
+| [LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory](https://openreview.net/forum?id=pZiyCaVuti) | Proc. Int. Conf. Learn. Represent. 2025 | 04_context_engineering_icl_memory | yes | arXiv |
+| [REPLUG: Retrieval-Augmented Black-Box Language Models](https://aclanthology.org/2024.naacl-long.463/) | Proc. Conf. North Amer. Chapter Assoc. Comput. Linguistics: Human Lang. Technol. 2024 | 04_context_engineering_icl_memory | yes | ACL Anthology |
+| [LLM for Data Management](https://doi.org/10.14778/3685800.3685838) | Proc. VLDB Endow. 2024 | 05_industry_applications | yes | PVLDB |
+| [Text-to-SQL Empowered by Large Language Models: A Benchmark Evaluation](https://doi.org/10.14778/3641204.3641221) | Proc. VLDB Endow. 2024 | 05_industry_applications | yes | PVLDB |
+| [API-Bank: A Comprehensive Benchmark for Tool-Augmented LLMs](https://aclanthology.org/2023.emnlp-main.187/) | Proc. Conf. Empirical Methods Natural Lang. Process. 2023 | 06_evaluation_benchmarks_safety | yes | ACL Anthology |
+| [AgentDID: Trustless Identity Authentication for AI Agents](https://arxiv.org/abs/2604.25189) | 2026 | 06_evaluation_benchmarks_safety | yes | arXiv |
+| [AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents](https://doi.org/10.52202/079017-2636) | Proc. Adv. Neural Inf. Process. Syst. 2024 | 06_evaluation_benchmarks_safety | yes | arXiv |
+| [Gorilla: Large Language Model Connected with Massive APIs](https://proceedings.neurips.cc/paper_files/paper/2024/hash/e4c61f578ff07830f5c37378dd3ecb0d-Abstract-Conference.html) | Proc. Adv. Neural Inf. Process. Syst. 2024 | 06_evaluation_benchmarks_safety | yes | arXiv |
+| [ToolQA: A Dataset for LLM Question Answering with External Tools](https://openreview.net/forum?id=pV1xV2RK6I) | Proc. Adv. Neural Inf. Process. Syst. 2023 | 06_evaluation_benchmarks_safety | yes | arXiv |
+| Learning to Retrieve Prompts for In-Context Learning | Proc. Conf. North Amer. Chapter Assoc. Comput. Linguistics: Human Lang. Technol. 2022 | 08_demo_selection_icl_sota | yes | ACL Anthology |
+| Selective Annotation Makes Language Models Better Few-Shot Learners | Proc. Int. Conf. Learn. Represent. 2023 | 08_demo_selection_icl_sota | yes | arXiv |
+| [A Survey of Knowledge Enhanced Pre-Trained Language Models](https://doi.org/10.1109/TKDE.2023.3310002) | IEEE Trans. Knowl. Data Eng. 2024 | — | DOI only | IEEE camera-ready, not redistributable |
+| [A Survey on Large Language Model based Autonomous Agents](https://doi.org/10.1007/s11704-024-40231-1) | Front. Comput. Sci. 2024 | — | DOI only | Springer camera-ready, not redistributable |
+| [Empowering edge intelligence: A comprehensive survey on on-device ai models](https://doi.org/10.1145/3724420) | ACM Comput. Surv. 2025 | — | DOI only | ACM camera-ready, not redistributable |
+| [Enhancing text annotation through rationale-driven collaborative few-shot prompting](https://doi.org/10.1109/ICASSP49660.2025.10889661) | Proc. IEEE Int. Conf. Acoust., Speech Signal Process. (ICASSP) 2025 | — | DOI only | IEEE camera-ready, not redistributable |
+| [Evaluation and Benchmarking of LLM Agents: A Survey](https://doi.org/10.1145/3711896.3736570) | Proc. 31st ACM SIGKDD Conf. Knowl. Discovery Data Mining 2025 | — | DOI only | ACM camera-ready, not redistributable |
+| [Learning under Concept Drift: A Review](https://doi.org/10.1109/TKDE.2018.2876857) | IEEE Trans. Knowl. Data Eng. 2019 | — | DOI only | IEEE camera-ready, not redistributable |
+| [Survey of Vector Database Management Systems](https://doi.org/10.1007/s00778-024-00864-x) | VLDB J. 2024 | — | DOI only | Springer camera-ready, not redistributable |
+| [Unifying Large Language Models and Knowledge Graphs: A Roadmap](https://doi.org/10.1109/TKDE.2024.3352100) | IEEE Trans. Knowl. Data Eng. 2024 | — | DOI only | IEEE camera-ready, not redistributable |
+
+One of these has a history worth keeping. Xi et al., *The Rise and Potential of Large Language Model Based Agents: A Survey*, was published in an earlier version of this repository under a different paper's title, *Large Language Model Agent: A Survey on Methodology, Applications and Challenges*. The library caught the mismatch and moved the file out of the screened folders; it is kept here, correctly named.
 
 ## Provenance of this index
 
