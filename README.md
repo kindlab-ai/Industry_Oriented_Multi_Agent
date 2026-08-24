@@ -10,10 +10,11 @@ This repository is not a reading list. It is the *released set of papers* that t
 |---|---|
 | PDF paths in the library across the nine folders | 137 |
 | Distinct documents, after removing byte-identical duplicates by content hash | **125** |
+| Distinct works, after also merging the 2 papers held in two versions | **123** |
 | Retained for the audit (proposes or evaluates an LLM-based multi-agent system **and** reports a quantitative main result) | **38** |
-| Not retained, each with a recorded reason | **87** |
+| Not retained, each with a recorded reason | **85** works (87 rows below, the difference being those second copies) |
 
-12 papers are cross-filed under two topical folders with identical bytes, which is why the two counts differ. This repository stores each document once, under the folder the audit refers to it by; the *also filed under* column of `index/papers.csv` records the other location. The distinction matters when reading proportions: a rate over 125 documents is not a rate over 137 filings.
+12 papers are cross-filed under two topical folders with identical bytes, which is why the first two counts differ. This repository stores each document once, under the folder the audit refers to it by; the *also filed under* column of `index/papers.csv` records the other location. A further 2 papers are stored as both a preprint and a camera-ready, which a content hash cannot merge; the *version pair* column names those. The distinction matters when reading proportions: a rate over 123 works is not a rate over 137 filings.
 
 The per-system coding behind the audit is released with the paper's supplement as `e1_audit.csv` (38 rows), `e2_audit.csv` (760 cells) and `excluded.csv` (the exclusion ledger). `index/papers.csv` in this repository is the same index as the tables below, machine-readable.
 
@@ -186,7 +187,7 @@ These are the systems every quantitative claim in the survey's empirical section
 | # | Paper | Venue / year | Status | Cited |
 |---:|---|---|---|:-:|
 | 1 | [ARES: An Automated Evaluation Framework for Retrieval-Augmented Generation Systems](https://aclanthology.org/2024.naacl-long.20/) | Proc. Conf. North Amer. Chapter Assoc. Comput. Linguistics: Human Lang. Technol. 2024 | not retained --- eval framework | ✓ |
-| 2 | Accelerating the Machine Learning Lifecycle with MLflow † | IEEE Data Engineering Bulletin 2018 | not retained --- screened, criterion not met |  |
+| 2 | Accelerating the Machine Learning Lifecycle with MLflow † | IEEE Data Engineering Bulletin 2018 | not retained --- MLOps platform |  |
 | 3 | [AgentBench: Evaluating LLMs as Agents](https://openreview.net/forum?id=zAdUB0aCTQ) | Proc. Int. Conf. Learn. Represent. 2024 | not retained --- benchmark | ✓ |
 | 4 | [Agents Under Siege: Breaking Pragmatic Multi-Agent LLM Systems with Optimized Prompt Attacks](https://aclanthology.org/2025.acl-long.476/) | ACL 2025 | **retained** | ✓ |
 | 5 | [Benchmark Self-Evolving: A Multi-Agent Framework for Dynamic LLM Evaluation](https://aclanthology.org/2025.coling-main.223/) | COLING 2025 | **retained** | ✓ |
